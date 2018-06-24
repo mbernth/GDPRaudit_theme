@@ -1,0 +1,98 @@
+/* # Gravity Forms Reset
+---------------------------------------------------------------------------------------------------- */
+.gform_wrapper,
+.gridcontainer .gform_wrapper{
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none
+    }
+    li{
+        list-style: none;
+        margin: 0 0 15px 0;
+        overflow: visible;
+        .small{
+            width: 100%;
+        }
+        .medium{
+            width: 100%;
+        }
+        .large{
+            width: 100%;
+        }
+        .datepicker{
+            width: 140px;
+            text-align: center;
+            margin-right: 15px;
+        }
+    }
+}
+
+.ginput_complex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    span{
+        label{
+            @include font-values($g_font-label-sub);
+        }
+    }
+    .name_first,
+    .name_last,
+    .ginput_left,
+    .ginput_right{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+    .ginput_left,
+    .ginput_right{
+        flex-basis: 100%;
+    }
+    &.ginput_container_address{
+        flex-wrap: wrap;
+        span{
+            margin-bottom: 15px;
+        }
+        [class*="address_line"]{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-basis: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: $mq-xsmall) {
+.gform_wrapper,
+.gridcontainer .gform_wrapper{
+    li{
+        .small{
+            width: calc(25% - 15px);
+        }
+        .medium{
+            width: calc(50% - 15px);
+        }
+    }
+}
+
+.ginput_complex {
+    flex-direction: row;
+    .name_first,
+    .name_last,
+    .ginput_left,
+    .ginput_right{
+        flex-basis: calc(50% - 15px);
+    }
+    .ginput_left,
+    .ginput_right{
+        flex-basis: calc(50% - 15px);
+    }
+    .ginput_right{
+        margin-left: $margin-default+px;
+    }
+    
+}
+
+}

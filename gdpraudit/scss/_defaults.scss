@@ -1,0 +1,682 @@
+/* # Defaults
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Typographical Elements
+---------------------------------------------------------------------- */
+
+html {
+    font-size: 62.5%; /* 10px browser default */
+}
+
+/* Chrome fix */
+body > div {
+	@include font-values($g_font-bread);
+}
+
+body {
+	background-color: $g_body-background-color;
+	font-family: $font-bread;
+	@include font-values($g_font-bread);
+	margin: 0;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition:    all 0.2s ease-in-out;
+	-ms-transition:     all 0.2s ease-in-out;
+	-o-transition:      all 0.2s ease-in-out;
+	transition:         all 0.2s ease-in-out;
+}
+
+a {
+	color: $g_font-bread-a-color;
+	text-decoration: underline;
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition:    color 0.2s ease-in-out;
+	-ms-transition:     color 0.2s ease-in-out;
+	-o-transition:      color 0.2s ease-in-out;
+	transition:         color 0.2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+	color: $g_font-bread-a-hover-color;
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+mark {
+	background: $g_font-mark-background-color;
+	color: $g_font-mark-color;
+	padding:0 2px;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	// list-style-type: none;
+	margin-bottom: 5px;
+}
+
+ol{
+	list-style: none;
+	counter-reset: li;
+}
+ol li{
+	counter-increment: li;
+}
+
+ol li::before{
+	font-family: $font-headlines;
+	@include font-size(1.8);
+	content: '.'counter(li);
+	display: inline-block;
+	width: 1em;
+	margin-left: -1.5em;
+	margin-right: 0.5em;
+	text-align: right;
+	direction: rtl;
+}
+
+hr {
+	border: 0;
+	border-collapse: collapse;
+	border-top: 1px solid $color-black;
+	clear: both;
+	margin: 20px 0;
+}
+
+b,
+strong {
+	font-weight: 600;
+}
+
+blockquote,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 30px 40px 40px;
+}
+
+blockquote::before {
+	content: "\201C";
+	display: block;
+	@include font-values($g_font-blockquote);
+	left: -50px;
+	position: relative;
+	top: 30px;
+}
+
+
+/* ## Headings
+---------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-headlines;
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+}
+
+h1 {
+	@include font-values($g_font-h1);
+}
+
+h2 {
+	@include font-values($g_font-h2);
+}
+
+h3 {
+	@include font-values($g_font-h3);
+}
+
+h4 {
+	@include font-values($g_font-h4);
+}
+
+h5 {
+	@include font-values($g_font-h5);
+}
+
+h6 {
+	@include font-values($g_font-h6);
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a{
+	text-decoration: none;
+}
+
+/* ## Objects
+---------------------------------------------------------------------- */
+
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+.featured-content img,
+.gallery img {
+	width: auto;
+}
+
+/* ## Forms
+---------------------------------------------------------------------- */
+input,
+textarea,
+select,
+select[multiple] {
+	border: 2px solid tint($color-black, 80%);
+	background-color:transparent;
+	@include font-values($g_font-input);
+	@include corners($radius);
+	padding:8px 15px;
+	width: 100%;
+	&:focus{
+		outline: none;
+		border-color: $color-active;
+	}
+}
+
+select{
+	&[multiple] {
+		height:auto;
+		option:checked {
+			background-color: tint($color-active, 80%);
+		}
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"] {
+	text-decoration: none;
+	&:focus{
+		border-color: $color-active;
+	}
+	&:hover{
+		border-color: $color-active;
+	}
+}
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
+
+/* Radio start */
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+   	position: absolute;
+   	left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label{
+   	position: relative;
+   	padding-left: 28px;
+   	cursor: pointer;
+   	line-height: 20px;
+   	display: inline-block;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+   	content: '';
+   	position: absolute;
+   	left: 0;
+   	top: 0;
+   	width: 18px;
+   	height: 18px;
+   	border: 2px solid tint($color-black, 80%);
+   	border-radius: 100%;
+	background: transparent;
+	-webkit-transition: all 0.2s ease;
+   	transition: all 0.2s ease;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+   	content: '';
+   	width: 8px;
+   	height: 8px;
+   	background:tint($color-black, 80%);
+   	position: absolute;
+   	top: 5px;
+   	left: 5px;
+   	border-radius: 100%;
+   	-webkit-transition: all 0.2s ease;
+   	transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+   	opacity: 0;
+   	-webkit-transform: scale(0);
+   	transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+   	opacity: 1;
+   	-webkit-transform: scale(1);
+   	transform: scale(1);
+}
+/* radio end */
+
+/* Checkbox start */
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+   	position: absolute;
+   	left: -9999px;
+}
+[type="checkbox"]:checked + label,
+[type="checkbox"]:not(:checked) + label{
+   	position: relative;
+   	padding-left: 28px;
+   	cursor: pointer;
+   	line-height: 20px;
+   	display: inline-block;
+}
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:before {
+   	content: '';
+   	position: absolute;
+   	left: 0;
+   	top: 0;
+   	width: 18px;
+   	height: 18px;
+   	border: 2px solid tint($color-black, 80%);
+	background: transparent;
+	-webkit-transition: all 0.2s ease;
+   	transition: all 0.2s ease;
+}
+[type="checkbox"]:checked + label:after,
+[type="checkbox"]:not(:checked) + label:after {
+   	content: '';
+   	width: 8px;
+   	height: 8px;
+   	background:tint($color-black, 80%);
+   	position: absolute;
+   	top: 5px;
+   	left: 5px;
+   	-webkit-transition: all 0.2s ease;
+   	transition: all 0.2s ease;
+}
+[type="checkbox"]:not(:checked) + label:after {
+   	opacity: 0;
+   	-webkit-transform: scale(0);
+   	transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+   	opacity: 1;
+   	-webkit-transform: scale(1);
+   	transform: scale(1);
+}
+/* Checkbox end */
+
+label {
+	@include font-values($g_font-label);
+	text-transform:uppercase;
+}
+
+::-moz-placeholder,
+::-webkit-input-placeholder {
+	@include font-values($g_font-placeholder);
+}
+
+.button{
+	padding: 10px 24px;
+	text-align: left;
+	width: 100%;
+	max-width: 200px;
+	text-decoration: none;
+	color: $g_font-button-background-color;
+	border-left: 5px solid $g_font-button-background-color;
+	box-shadow: inset 0 0 0 $g_font-button-background-color;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition:    all 0.6s ease-in-out;
+	-ms-transition:     all 0.6s ease-in-out;
+	-o-transition:      all 0.6s ease-in-out;
+	transition:         all 0.6s ease-in-out;
+	&:hover{
+		color: tint($g_font-button-background-color, 100%);
+		box-shadow: inset 200px 0 0 $g_font-button-background-color;
+	}
+	&.button-primary{
+		color: $g_font-button-primary-background-color;
+		border-left: 5px solid $g_font-button-primary-background-color;
+		box-shadow: inset 0 0 0 $g_font-button-primary-background-color;
+		&:hover{
+			color: tint($g_font-button-primary-background-color, 100%);
+			box-shadow: inset 200px 0 0 $g_font-button-primary-background-color;
+		}
+	}
+	&.button-info{
+		color: $g_font-button-info-background-color;
+		border-left: 5px solid $g_font-button-info-background-color;
+		box-shadow: inset 0 0 0 $g_font-button-info-background-color;
+		&:hover{
+			color: tint($g_font-button-info-background-color, 100%);
+			box-shadow: inset 200px 0 0 $g_font-button-info-background-color;
+		}
+	}
+	&.button-alert{
+		color: $g_font-button-alert-background-color;
+		border-left: 5px solid $g_font-button-alert-background-color;
+		box-shadow: inset 0 0 0 $g_font-button-alert-background-color;
+		&:hover{
+			color: tint($g_font-button-alert-background-color, 100%);
+			box-shadow: inset 200px 0 0 $g_font-button-alert-background-color;
+		}
+	}
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
+ {
+	border: 0;
+	cursor: pointer;
+	@include font-values($g_font-button);
+	color: $g_font-button-color;
+	text-align: center;
+	text-decoration: none;
+	background-color: $g_font-button-background-color;
+	@include corners($g_font-button_radius);
+	padding: 20px 24px;
+	width: 100%;
+	max-width:200px;
+	&:hover,
+	&:focus{
+		color: $g_font-button-color-hover;
+		background-color: $g_font-button-background-color-hover;
+		box-shadow: $g_font-button-box-shadow-hover;
+	}
+	&.disabled{
+		color:$g_font-button-disabled-color;
+		background-color: $g_font-button-disabled-background-color;
+		cursor: default;
+		&:hover,
+		&:focus{
+			color:$g_font-button-disabled-color-hover;
+			background-color: $g_font-button-disabled-background-color-hover;
+			box-shadow: $g_font-button-disabled-box-shadow-hover;
+		}
+	}
+	&.button-primary{
+		color:$g_font-button-primary-color;
+		background-color: $g_font-button-primary-background-color;
+		&:hover,
+		&:focus{
+			color:$g_font-button-primary-color-hover;
+			background-color: $g_font-button-primary-background-color-hover;
+			box-shadow: $g_font-button-primary-box-shadow-hover;
+		}
+	}
+	&.button-info{
+		color:$g_font-button-info-color;
+		background-color: $g_font-button-info-background-color;
+		&:hover,
+		&:focus{
+			color:$g_font-button-info-color-hover;
+			background-color: $g_font-button-info-background-color-hover;
+			box-shadow: $g_font-button-info-box-shadow-hover;
+		}
+	}
+	&.button-alert{
+		color:$g_font-button-alert-color;
+		background-color: $g_font-button-alert-background-color;
+		&:hover,
+		&:focus{
+			color:$g_font-button-alert-color-hover;
+			background-color: $g_font-button-alert-background-color-hover;
+			box-shadow: $g_font-button-alert-box-shadow-hover;
+		}
+	}
+}
+
+/* ### Forms Colored Rows
+--------------------------------------------- */
+.light {
+	input,
+	textarea,
+	select,
+	select[multiple],
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="tel"] {
+		color: shade($g_gridcontainer-light, 60%);
+		border-color:tint($g_gridcontainer-light, 20%);
+		&:focus,
+		&:hover{
+			border-color: tint($color-active, 40%);
+		}
+	}
+	select[multiple] option:checked {
+		background-color: shade($g_gridcontainer-light, 80%);
+	}
+	label {
+		color:$color-white;
+	}
+	.ginput_complex {
+		span{
+			label{
+				color:tint($g_gridcontainer-light, 20%);
+			}
+		}
+	}
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"]{
+		background-color: $color-white;
+		color: $color-black;
+		&:hover,
+		&:focus{
+			background-color: shade($color-white, 20%);
+		}
+	}
+	[type="radio"]:checked + label:before,
+	[type="radio"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before,
+	[type="checkbox"]:not(:checked) + label:before {
+   		border-color: tint($g_gridcontainer-light, 20%);
+	}
+	[type="radio"]:checked + label:after,
+	[type="radio"]:not(:checked) + label:after,
+	[type="checkbox"]:checked + label:after,
+	[type="checkbox"]:not(:checked) + label:after {
+   		background:tint($g_gridcontainer-light, 20%);
+	}
+	a.button{
+		color: $g_font-button-info-background-color;
+		border-left: 5px solid $g_font-button-info-background-color;
+		box-shadow: inset 0 0 0 $g_font-button-info-background-color;
+		&:hover{
+			color: tint($g_font-button-info-background-color, 100%);
+			box-shadow: inset 200px 0 0 $g_font-button-info-background-color;
+		}
+	}
+}
+
+.dark{
+	label {
+		color:tint($color-black, 80%);
+	}
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"]{
+		background-color: tint($color-black, 80%);
+		color: $color-black;
+		&:hover,
+		&:focus{
+			background-color: tint($color-black, 60%);
+		}
+	}
+}
+
+
+.medium {
+	input,
+	textarea,
+	select,
+	select[multiple],
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="tel"] {
+		color: $color-white;
+		border-color:tint($color-secondary, 20%);
+		&:focus,
+		&:hover{
+			border-color: tint($color-secondary, 100%);
+		}
+	}
+	select[multiple] option:checked {
+		background-color: tint($color-secondary, 80%);
+	}
+	label {
+		color:$color-white;
+	}
+	.ginput_complex {
+		span{
+			label{
+				color:tint($color-secondary, 80%);
+			}
+		}
+	}
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"]{
+		background-color: $color-white;
+		color: $color-black;
+		&:hover,
+		&:focus{
+			background-color: shade($color-white, 20%);
+		}
+	}
+	[type="radio"]:checked + label:before,
+	[type="radio"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before,
+	[type="checkbox"]:not(:checked) + label:before {
+   		border-color: tint($color-secondary, 20%);
+	}
+	[type="radio"]:checked + label:after,
+	[type="radio"]:not(:checked) + label:after,
+	[type="checkbox"]:checked + label:after,
+	[type="checkbox"]:not(:checked) + label:after {
+   		background:tint($color-secondary, 20%);
+	}
+	a.button{
+		color: $color-white;
+		border-left: 5px solid $color-white;
+		box-shadow: inset 0 0 0 $color-white;
+		&:hover{
+			color: $color-black;
+			box-shadow: inset 200px 0 0 $color-white;
+		}
+	}
+}
+
+
+
+
+/* ## Tables
+---------------------------------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+tbody {
+	border-bottom: 1px solid $color-black;
+}
+
+td,
+th {
+	text-align: left;
+}
+
+td {
+	border-top: 1px solid $color-black;
+	padding: 6px 0;
+}
+
+th {
+	font-weight: 400;
+}
+
+/* ## Screen Reader Text
+---------------------------------------------------------------------- */
+
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.genesis-nav-menu .search input[type="submit"]:focus,
+.widget_search input[type="submit"]:focus  {
+	clip: auto !important;
+	height: auto;
+	width: auto;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 15px 23px 14px;
+	color: $color-black;
+	background: $color-white;
+	z-index: 100000; /* Above WP toolbar. */
+	text-decoration: none;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+}
+
+.more-link {
+    position: relative;
+}

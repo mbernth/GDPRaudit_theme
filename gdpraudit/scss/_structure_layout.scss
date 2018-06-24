@@ -1,0 +1,219 @@
+/* # Structure, Layout and Grid
+---------------------------------------------------------------------------------------------------- */
+.site-container{
+	overflow: auto;
+}
+@supports (display: grid) {
+	.site-container{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"before-header"
+			"site-header"
+			"featured-section"
+			"nav-secondary"
+			"breadcrumb"
+			"site-inner"
+			"footer-widgets"
+			"site-footer"
+			;
+		.before-header{
+			grid-area:before-header;
+		}
+		.site-header{
+			grid-area:site-header;
+		}
+		.featured-section{
+			grid-area: featured-section;
+		}
+		.nav-secondary{
+			grid-area:nav-secondary;
+		}
+		.breadcrumb{
+			grid-area:breadcrumb;
+		}
+		.site-inner{
+			grid-area:site-inner;
+		}
+		.footer-widgets{
+			grid-area:footer-widgets;
+		}
+		.site-footer{
+			grid-area:site-footer;
+		}
+	}
+}
+/* ## Site Containers
+---------------------------------------------------------------------- */
+
+.site-inner,
+.wrap {
+	margin: 0 auto;
+}
+
+.site-inner{
+	display: block;
+	clear: both;
+	margin: 30px auto;
+	padding-top: 100px;
+	width:100%;
+	overflow: auto;
+}
+.content-sidebar .site-inner,
+.sidebar-content .site-inner,
+.content-sidebar-sidebar .site-inner,
+.sidebar-sidebar-content .site-inner,
+.sidebar-content-sidebar .site-inner{
+	width: 90%;
+	.gridcontainer.white{
+		.wrap,
+		.row_headline{
+			width: 100%;
+		}
+	}
+}
+.sidebar-primary{
+	background-color:transparent;
+}
+.sidebar-secondary{
+	background-color:transparent;
+}
+
+/* ### Site Containers Full-width
+--------------------------------------------- */
+
+.full-width-content .site-inner{
+	margin: 112px 0 0 0;
+	float: left;
+}
+
+.full-width-content .site-inner .content .breadcrumb,
+.full-width-content .site-inner .content .entry{
+	width:90%;
+	margin: 0px auto;
+}
+.full-width-content .site-inner .content .entry{
+	margin-bottom: 30px;
+}
+
+/* ## Grid Containers
+---------------------------------------------------------------------- */
+.gridcontainer{
+	padding: 30px 0;
+	.row_headline{
+		width: 90%;
+    	margin: 0 auto;
+		margin: 0 auto 20px;
+	}
+	.wrap{
+		width: 90%;
+    	margin: 0 auto;
+		section{
+			padding: 30px 0 0;
+		}
+	}
+}
+.gridcontainer.non{
+	padding: 0;
+	.row_headline{
+		display: none;
+	}
+	.wrap{
+		width: 100%;
+		.wysiwyg{
+			margin: 0 auto;
+			padding: 30px 0;
+			width: 90%;
+			.entry-title{
+				margin-bottom: 60px;
+			}
+		}
+	}
+}
+.gridcontainer{
+	.backimage{
+		min-height: 50vh;
+		background-size: cover;
+    	background-position: 50% 50%;
+	}
+}
+.gridcontainer{
+	.gridimage{
+		min-height: 100%;
+		object-fit: cover;
+	}
+}
+
+/* ### Grid Containers coloured backgrounds
+--------------------------------------------- */
+.gridcontainer.light{
+	background-color: $g_gridcontainer-light;
+	color: $g_gridcontainer-light-font-color;
+	.row_headline{
+		color: $g_gridcontainer-light-font-color;
+	}
+	.wrap{
+		section.wysiwyg{
+			padding: $margin-default+px;
+			background-color: shade($g_gridcontainer-light, 20%);
+		}
+	}
+	&.non{
+		.wrap{
+			section.wysiwyg{
+				padding: 0;
+				background-color: transparent;;
+			}
+		}
+	}
+}
+
+.gridcontainer.dark{
+	background-color: shade($g_gridcontainer-dark, 40%);
+	color: $g_gridcontainer-dark-font-color;
+	.row_headline{
+		color: $g_gridcontainer-dark-font-color;
+	}
+	.wrap{
+		section.wysiwyg{
+			padding: $margin-default+px;
+			background-color: $g_gridcontainer-dark;
+		}
+	}
+	&.non{
+		.entry-title{
+			color: tint($g_gridcontainer-dark-font-color, 100%);
+		}
+		.wrap{
+			section.wysiwyg{
+				padding: 0;
+				background-color: transparent;;
+			}
+		}
+	}
+}
+
+.gridcontainer.medium{
+	background-color: $g_gridcontainer-medium;
+	color:$g_gridcontainer-medium-font-color;
+	.row_headline{
+		color: $g_gridcontainer-medium-font-color;
+	}
+	.wrap{
+		section.wysiwyg{
+			padding: $margin-default+px;
+			background-color: shade($g_gridcontainer-medium, 20%);
+		}
+	}
+	&.non{
+		.entry-title{
+			color: tint($g_gridcontainer-medium-font-color, 100%);
+		}
+		.wrap{
+			section.wysiwyg{
+				padding: 0;
+				background-color: transparent;;
+			}
+		}
+	}
+}

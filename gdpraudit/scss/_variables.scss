@@ -1,0 +1,237 @@
+/* # Variables
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Colours
+---------------------------------------------------------------------- */
+
+/* Black */
+$color-black: #04090c; /* Black */
+$color-black_rgb: rgba(4, 9, 12, 1); /* Black */
+
+/* White */
+$color-white: #fcfbf5;
+$color-black_rgb: rgba(252, 251, 245, 1) ; /* White */
+
+/* Primary */
+$color-primary: #142e3d; /* Colour */
+$color-primary_rgb: rgba(20, 46, 61, 1) ; /* Colour */
+
+/* Secondary */
+$color-secondary: #f1eacf; /* Colour */
+$color-secondary_rgb: rgba(241, 234, 207, 1) ; /* Colour */
+
+/* Active - Active/Focuced*/
+$color-active: #62888d; /* Colour */
+$color-active_rgb: rgba(98, 136, 141, 1) ; /* Colour */
+
+/* Accent 1 - Error/Alert */
+$color-accent-one: #bf312d; /* Colour */
+$color-accent-one_rgb: rgba(191, 49, 45, 1) ; /* Colour */
+
+/* Accent 2 - Warning */
+$color-accent-two: #dec955; /* Colour */
+$color-accent-two_rgb: rgba(222, 201, 85, 1) ; /* Colour */
+
+/* Accent 3 - Sucess */
+$color-accent-three: #749e7e; /* Colour */
+$color-accent-three_rgb: rgba(116, 158, 126, 1) ; /* Colour */
+
+/* ## Defaults Globals
+---------------------------------------------------------------------- */
+/* Global body values */
+$g_body-background-color:$color-white;
+
+/* ## Typography
+---------------------------------------------------------------------- */
+/* Header type */
+@font-face {
+    font-family: 'Intervogue-Black';
+    src: url('fonts/Intervogue-Black.eot');
+    src: url('fonts/Intervogue-Black.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Intervogue-Black.woff') format('woff'),
+         url('fonts/Intervogue-Black.ttf') format('truetype'),
+         url('fonts/Intervogue-Black.svg#Intervogue-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Bread type */
+@font-face {
+    font-family: '05-brother1816-book-web';
+    src: url('fonts/05-brother1816-book-web.eot'); /* IE9 Compat Modes */
+    src: url('fonts/05-brother1816-book-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/05-brother1816-book-web.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/05-brother1816-book-web.woff2') format('woff2'),
+         url('fonts/05-brother1816-book-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/05-brother1816-book-web.svg#svgFontName') format('svg'); /* Legacy iOS */
+         font-weight: normal;
+         font-style: normal;
+}
+@font-face {
+    font-family: '06-brother1816-book_italic-web';
+    src: url('fonts/06-brother1816-book_italic-web.eot'); /* IE9 Compat Modes */
+    src: url('fonts/06-brother1816-book_italic-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/06-brother1816-book_italic-web.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/06-brother1816-book_italic-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/06-brother1816-book_italic-web.svg#svgFontName') format('svg'); /* Legacy iOS */
+         font-weight: normal;
+         font-style: italic;
+}
+@font-face {
+    font-family: '11-brother1816-bold-web';
+    src: url('fonts/11-brother1816-bold-web.eot'); /* IE9 Compat Modes */
+    src: url('fonts/11-brother1816-bold-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/11-brother1816-bold-web.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/11-brother1816-bold-web.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/11-brother1816-bold-web.svg#svgFontName') format('svg'); /* Legacy iOS */
+         font-weight: bold;
+         font-style: normal;
+}
+@font-face {
+    font-family: '12-brother1816-bold_italic-web';
+    src: url('fonts/12-brother1816-bold_italic-web.eot'); /* IE9 Compat Modes */
+    src: url('fonts/12-brother1816-bold_italic-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/12-brother1816-bold_italic-web.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/12-brother1816-bold_italic-web.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/12-brother1816-bold_italic-web.svg#svgFontName') format('svg'); /* Legacy iOS */
+         font-weight: bold;
+         font-style: italic;
+}
+@font-face {
+    font-family: 'cerabasic-black-webfont';
+    src: url('fonts/cerabasic-black-webfont.eot'); /* IE9 Compat Modes */
+    src: url('fonts/cerabasic-black-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/cerabasic-black-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/cerabasic-black-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/cerabasic-black-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+         font-weight: normal;
+         font-style: normal;
+}
+
+/* Global Font Faminly */
+$font-bread: '05-brother1816-book-web', Helvetica, Arial, sans-serif;
+$font-bold: '11-brother1816-bold-web', Helvetica, Arial, sans-serif;
+$font-headlines: 'Intervogue-Black', Helvetica, Arial, sans-serif;
+$font-navigation: 'Intervogue-Black', Helvetica, Arial, sans-serif;
+
+/*** Global Default values ***/
+
+/* Default body text */
+$g_font-bread-a-color:$color-secondary;
+$g_font-bread-a-hover-color:tint($color-secondary, 40%);
+
+/* Mark */
+$g_font-mark-color:$color-white;
+$g_font-mark-background-color:$color-secondary;
+
+/* Button */
+$g_font-button_radius: 5;
+
+$g_font-button-background-color: $color-active;
+$g_font-button-color: $color-white;
+$g_font-button-color-hover: $color-white;
+$g_font-button-background-color-hover: tint($color-active, 20%);
+$g_font-button-box-shadow-hover:0px 5px 3px 0px rgba(14, 28, 45, 0.25);
+
+$g_font-button-disabled-background-color: tint($color-black, 80%);
+$g_font-button-disabled-color: $color-white;
+$g_font-button-disabled-color-hover: $color-white;
+$g_font-button-disabled-background-color-hover: tint($color-black, 80%);
+$g_font-button-disabled-box-shadow-hover:0px 0px 0px 0px rgba(14, 28, 45, 0);
+
+$g_font-button-primary-background-color: $color-primary;
+$g_font-button-primary-color: $color-white;
+$g_font-button-primary-color-hover: $color-white;
+$g_font-button-primary-background-color-hover: tint($color-primary, 20%);
+$g_font-button-primary-box-shadow-hover:0px 5px 3px 0px rgba(14, 28, 45, 0.25);
+
+$g_font-button-info-background-color: $color-black;
+$g_font-button-info-color: $color-white;
+$g_font-button-info-color-hover: $color-white;
+$g_font-button-info-background-color-hover: tint($color-black, 20%);
+$g_font-button-info-box-shadow-hover:0px 5px 3px 0px rgba(14, 28, 45, 0.25);
+
+$g_font-button-alert-background-color: $color-accent-three;
+$g_font-button-alert-color: $color-white;
+$g_font-button-alert-color-hover: $color-white;
+$g_font-button-alert-background-color-hover: tint($color-accent-three, 20%);
+$g_font-button-alert-box-shadow-hover:0px 5px 3px 0px rgba(14, 28, 45, 0.25);
+
+/* ## Border Radius
+---------------------------------------------------------------------- */
+/* Globals */
+$radius: 5;
+
+/* ## Colored Gridcontainer
+---------------------------------------------------------------------- */
+$g_gridcontainer-light:shade($color-white, 10%);
+$g_gridcontainer-light-font-color: $color-black;
+$g_gridcontainer-medium:$color-secondary;
+$g_gridcontainer-medium-font-color: $color-white;
+$g_gridcontainer-dark: tint($color-black, 10%);
+$g_gridcontainer-dark-font-color: tint($color-black, 80%);
+
+/* ## Media Queries
+---------------------------------------------------------------------- */
+$mq-xsmall: 37.5em; /* 600 pixel */
+$mq-small: 55.625em; /* 890 pixel */
+$mq-nav:63.938em; /* 1023 pixel */
+$mq-medium: 64em; /* 1024 pixel */
+$mq-large: 80em; /* 1280 pixel */
+$mq-xlarge: 93.75em; /* 1500 pixel */
+
+
+/* ## Site Structure
+---------------------------------------------------------------------- */
+
+/* Full width content target
+--------------------------------------------- */
+$target-default: 320;
+$target-small: 800;
+$target-medium: 920;
+$target-large: 1200;
+$target-xlarge: 1400;
+
+/* Margins */
+$margin-zero: 0;
+$margin-default: 30;
+$margin-small: 30;
+$margin-medium: 30;
+$margin-large: 30;
+$margin-xlarge: 40;
+
+/* Content Sidebar, Sidebar Content
+ - Primarily for Grid fallback
+--------------------------------------------- */
+/* Content */
+$content-cs-medium: 593;
+$content-cs-large: 780;
+$content-cs-xlarge: 907;
+
+/* Primary Sidebar */
+$sidebar-p-cs-medium: 297;
+$sidebar-p-cs-large: 390;
+$sidebar-p-cs-xlarge: 453;
+
+/* Sidebar Sidebar, Sidebar Sidebar Content
+ - Primarily for Grid fallback
+--------------------------------------------- */
+
+/* Content Wrap */
+$contentwrap-css-medium: 742;
+$contentwrap-css-large: 975;
+$contentwrap-css-xlarge: 1133;
+
+/* Content */
+$content-css-medium: 534;
+$content-css-large: 709;
+$content-css-xlarge: 820;
+
+/* Primary Sidebar */
+$sidebar-p-css-medium: 178;
+$sidebar-p-css-large: 236;
+$sidebar-p-css-xlarge: 273;
+
+/* Secondary Sidebar */
+$sidebar-s-css-medium: 148;
+$sidebar-s-css-large: 195;
+$sidebar-s-css-xlarge: 227;

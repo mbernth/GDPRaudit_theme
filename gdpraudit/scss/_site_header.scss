@@ -1,0 +1,145 @@
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+	position:fixed;
+	margin-top:0px;
+	padding: 40px 0;
+	width:100%;
+	float:left;
+	background-color: rgba(253, 254, 255, 0);
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition:    all 0.5s ease-in-out;
+	-ms-transition:     all 0.5s ease-in-out;
+	-o-transition:      all 0.5s ease-in-out;
+	transition:         all 0.5s ease-in-out;
+	z-index:1000;
+	&.main-menu-open{
+		background-color:rgba(253, 254, 255, 0.95);
+	}
+	&.dark {
+		background-color: rgba(253, 254, 255, 0.85);
+		&.main-menu-open{
+			background-color:rgba(253, 254, 255, 0.95);
+		}
+	}
+}
+.has-push-top .site-header,
+.featured-image .has-push-top .site-header,
+.featured-image .has-push-top .site-header.dark,
+.home-section .has-push-top .site-header,
+.home-section .has-push-top .site-header.dark {
+	margin-top:200px;
+}
+
+.site-header > .wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin:0 auto;
+	max-width:100%;
+}
+.site-header.headroom,
+.site-header.headroom--unpinned:hover{
+	opacity: 1;
+}
+
+.site-header.headroom--unpinned{
+	opacity: 0;
+	margin-top: -60px;
+}
+
+/* ## Title Area
+---------------------------------------------------------------------- */
+
+.title-area {
+	float: left;
+	margin-left: 5%;
+	p {
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+	}
+}
+
+.header-full-width .title-area {
+	float:left;
+	width: 170px;
+}
+
+.site-title {
+	@include font-values($g_font-site-title);
+	line-height: 0;
+	a,
+	a:hover,
+	a:focus {
+		color: $color-black;
+	}
+}
+
+.title-area .site-title > a {
+  display: block;
+  margin-bottom: 0px;
+	text-indent: -9999px;
+}
+
+.site-description {
+	@include font(0, 0);
+	text-indent: -9999px;
+}
+
+.site-description,
+.site-title {
+	margin-bottom: 0;
+}
+
+.header-image .site-description,
+.header-image .site-title {
+	display: block;
+	text-indent: -9999px;
+}
+
+.site-logo {
+    display: block;
+}
+#site-logo{
+	width: 170px;
+	height: 20px;
+}
+
+
+/* ## Widget Area
+---------------------------------------------------------------------- */
+
+.site-header .widget-area {
+	float: right;
+	text-align: right;
+	@include structure(800, 1200);
+}
+
+/* ## Before header
+---------------------------------------------------------------------- */
+
+.before-header {
+	float: left;
+	padding:10px 5%;
+	width:100%;
+	background-color: $color-black;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition:    all 0.5s ease-in-out;
+	-ms-transition:     all 0.5s ease-in-out;
+	-o-transition:      all 0.5s ease-in-out;
+	transition:         all 0.5s ease-in-out;
+	z-index:1000;
+	.wrap{
+		margin:0 auto;
+		max-width:100%;
+	}
+	.widget{
+		@include font-values($g_font-before-header);
+		text-transform:uppercase;
+		letter-spacing:1px;
+		text-align:right;
+	}
+}

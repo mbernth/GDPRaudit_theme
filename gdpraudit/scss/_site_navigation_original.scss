@@ -1,0 +1,118 @@
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Genesis Navigation Menu
+--------------------------------------------- */
+.genesis-nav-menu {
+	display: flex;
+	justify-content: flex-end;
+	clear: both;
+	@include font-values($g_font-nav);
+	text-transform:uppercase;
+	width: 100%;
+	.menu-item {
+		display: inline-block;
+		margin: 0;
+		&:hover {
+			position: static;
+			> .sub-menu {
+				left: auto;
+				opacity: 1;
+			}
+		}
+		a {
+			font-family: $font-navigation;
+			@include font-values($g_font-nav);
+			letter-spacing:0.2em;
+			text-decoration: none;
+			color:$color-black;
+			display: block;
+			padding: 0 0 0 40px;
+			&:hover,
+			&:focus{
+				color: $color-active;
+				text-decoration: none;
+			}
+		}
+		.sub-menu {
+			left: -9999px;
+			opacity: 0;
+			position: absolute;
+			margin: 0 0 0 20px;
+			-webkit-transition: opacity .4s ease-in-out;
+			-moz-transition:    opacity .4s ease-in-out;
+			-ms-transition:     opacity .4s ease-in-out;
+			-o-transition:      opacity .4s ease-in-out;
+			transition:         opacity .4s ease-in-out;
+			width: 300px;
+			z-index: 99;
+			a {
+				background-color: $color-active;
+				padding: 15px 20px;
+				position: relative;
+				width: 300px;
+				word-wrap: break-word;
+				text-transform: none;
+				&:hover {
+					border-color: transparent;
+					background-color: tint($color-black, 80%);
+				}
+			}
+			.sub-menu {
+				margin: -55px 0 0 300px;
+			}
+		}
+	}
+	.current-menu-item > a{
+		color: $color-active;
+		&:hover,
+		&:focus{
+			color: $color-black;
+		}
+	}
+	.current-menu-parent > a{
+		color: $color-secondary;
+		&:hover,
+		&:focus{
+			color: $color-active;
+		}
+	}
+}
+/* ## Responsive Menu
+--------------------------------------------- */
+.responsive-menu-icon {
+	cursor: pointer;
+  	display: none;
+  	margin-bottom: -1px;
+  	text-align: center; 
+}
+
+/* ## Primary Navigation
+--------------------------------------------- */
+.genesis-nav-menu.responsive-menu{
+	display: block;
+}
+.nav-primary {
+	display: block;
+	background-color:transparent;
+	width: 100%;
+	.wrap {
+		max-width: 100%;
+	}
+}
+
+/* ## Accessible Menu
+--------------------------------------------- */
+
+.menu .menu-item:focus {
+	position: static;
+}
+
+.menu .menu-item > a:focus + ul.sub-menu,
+.menu .menu-item.sfHover > ul.sub-menu {
+	left: auto;
+	overflow: visible !important;
+	opacity: 1;
+	display: block;
+	z-index: 4000;
+}

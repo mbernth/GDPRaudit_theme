@@ -1,0 +1,199 @@
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+.site-header > .wrap {
+	flex-direction: column;
+}
+
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+/* ## Primary Navigation
+---------------------------------------------------------------------- */
+.nav-primary {
+    position: relative;
+	width: auto;
+	margin-top: 0;
+}
+
+/* ## Genesis Navigation Menu
+---------------------------------------------------------------------- */
+.genesis-nav-menu {
+	display: flex;
+	justify-content: flex-end;
+	clear: both;
+	@include font-values($g_font-nav);
+	text-transform:uppercase;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 5%;
+	.menu-item {
+		margin: 0;
+		list-style: none;
+		&:hover {
+			position: static;
+			> .sub-menu {
+				left: auto;
+				opacity: 1;
+			}
+		}
+		a {
+			font-family: $font-bold;
+			@include font-values($g_font-nav);
+			letter-spacing:0.2em;
+			text-decoration: none;
+			color:$color-black;
+			display: block;
+			padding: 10px 0;
+			&:hover,
+			&:focus{
+				color: $color-active;
+				text-decoration: none;
+			}
+		}
+		.sub-menu {
+			display: none;
+			a {
+                border-top: 1px solid $color-black;
+                padding: 10px 0;
+				position: relative;
+				width: 300px;
+				font-size: 90%;
+				word-wrap: break-word;
+				text-transform: none;
+			}
+			.sub-menu {
+				margin: -55px 0 0 300px;
+				a{
+					font-size: 80%;
+					margin-left: 10px;
+					border-top: none;
+				}
+			}
+		}
+	}
+	.current-menu-item > a{
+		color: $color-active;
+		&:hover,
+		&:focus{
+			color: $color-black;
+		}
+	}
+	.current-menu-parent > a{
+		color: $color-secondary;
+		&:hover,
+		&:focus{
+			color: $color-active;
+		}
+    }
+    &.responsive-menu{
+		display: none;
+		> .menu-item{
+			> .sub-menu{
+			display: none;
+			}
+		}
+		.menu-item-has-children{
+			cursor: pointer;
+			&:before{
+				content: "\f347";
+				float: right;
+				font: normal 16px/1 'dashicons';
+				height: 16px;
+				padding: 10px 0 20px 20px;
+				right: 0;
+				text-align: right;
+				z-index: 9999;
+				color: $color-black;
+			}	
+		}
+		.menu-open.menu-item-has-children:before{
+			content: "\f343";
+			color: $color-black;
+		}
+		.menu-item{
+			display: block;
+			&:hover{
+				position: static;
+			}
+		}
+        .sub-menu{
+	        left: auto;
+	        opacity: 0;
+	        position: relative;
+	        width: 100%;
+            z-index: 99;
+            .current-menu-item > a:hover,
+            li a,
+            li a:hover{
+	            position: relative;
+	            width: 100%;
+            }
+            .sub-menu{
+                margin: 0;
+            }
+        }
+    }
+}
+
+/* Responsive Menu Icon
+--------------------------------------------- */
+$bar-width: 30px;
+$bar-height: 3px;
+$bar-spacing: 6px;
+
+.responsive-menu-icon{
+	position: absolute;
+	display: block;
+  	top: -27px;
+  	right: 5%;
+  	margin: auto;
+  	width: $bar-width;
+	height: $bar-height + $bar-spacing*2;
+	cursor: pointer;
+}
+
+.bar,
+.bar:after,
+.bar:before {
+  	width: $bar-width;
+	height: $bar-height;
+}
+
+.bar {
+	position: relative;
+	transform: translateY($bar-spacing);
+	background: rgba(0, 11, 18, 1);
+	transition: all 0ms 300ms;
+  	&.animate {
+    	background: rgba(0, 11, 18, 0); 
+  	}
+}
+
+.bar:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: $bar-spacing;
+	background: rgba(0, 11, 18, 1);
+	transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: $bar-spacing;
+	background: rgba(0, 11, 18, 1);
+	transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:after {
+	top: 0;
+	transform: rotate(45deg);
+	transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.bar.animate:before {
+	bottom: 0;
+	transform: rotate(-45deg);
+	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
