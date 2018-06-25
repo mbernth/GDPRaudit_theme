@@ -921,6 +921,13 @@
 		"oAP": "\/gdpraudit\/lib\/flexible_grids_content.php",
 		"oF": 0
 		},
+	"\/gdpraudit\/lib\/flexible_page_content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpraudit\/lib\/flexible_page_content.php",
+		"oF": 0
+		},
 	"\/gdpraudit\/lib\/palettes.php": {
 		"cB": 0,
 		"ft": 8192,
