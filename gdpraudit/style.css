@@ -2780,45 +2780,33 @@ th {
 
 /* ### Grid Containers coloured backgrounds
 --------------------------------------------- */
+.gridcontainer.cta-area .wysiwyg {
+  color: #fcfbf5;
+  text-align: center;
+  padding: 30px;
+  background-color: #142e3d; }
+
 .gridcontainer.light {
   background-color: #e3e2dd;
   color: #04090c; }
   .gridcontainer.light .row_headline {
     color: #04090c; }
-  .gridcontainer.light .wrap section.wysiwyg {
-    padding: 30px;
-    background-color: #b6b5b1; }
-  .gridcontainer.light.non .wrap section.wysiwyg {
-    padding: 0;
-    background-color: transparent; }
 
 .gridcontainer.dark {
   background-color: #111416;
   color: #cdcece; }
   .gridcontainer.dark .row_headline {
     color: #cdcece; }
-  .gridcontainer.dark .wrap section.wysiwyg {
-    padding: 30px;
-    background-color: #1d2224; }
   .gridcontainer.dark.non .entry-title {
     color: white; }
-  .gridcontainer.dark.non .wrap section.wysiwyg {
-    padding: 0;
-    background-color: transparent; }
 
 .gridcontainer.medium {
   background-color: #f1eacf;
   color: #fcfbf5; }
   .gridcontainer.medium .row_headline {
     color: #fcfbf5; }
-  .gridcontainer.medium .wrap section.wysiwyg {
-    padding: 30px;
-    background-color: #c1bba6; }
   .gridcontainer.medium.non .entry-title {
     color: white; }
-  .gridcontainer.medium.non .wrap section.wysiwyg {
-    padding: 0;
-    background-color: transparent; }
 
 /*
 # Flexible Grid
@@ -3827,7 +3815,7 @@ img.alignright,
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-  position: fixed;
+  position: absolute;
   margin-top: 0px;
   padding: 40px 0;
   width: 100%;
@@ -3871,8 +3859,7 @@ img.alignright,
 /* ## Title Area
 ---------------------------------------------------------------------- */
 .title-area {
-  float: left;
-  margin-left: 5%; }
+  float: left; }
   .title-area p {
     margin: 0;
     font-size: 0;
@@ -4488,6 +4475,19 @@ p.entry-meta {
 */
 /* # Frontpage Style
 ---------------------------------------------------------------------------------------------------- */
+.home-section .site-header > .wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%; }
+
+.home-section .cls-1 {
+  fill: #e8eaec; }
+
+.home-section .cls-2 {
+  fill: #e0e7e8; }
+
 .home-section .site-inner {
   margin-top: 0px;
   padding-top: 0; }
@@ -4496,145 +4496,136 @@ p.entry-meta {
 .home-section .site-inner .content .entry {
   margin-bottom: 0; }
 
-/* # Site Header
+/* # Front page top image
 --------------------------------------------------- */
-/*
-.home-section .site-header {
-	margin-top:0px;
-	background-color: transparent;
-}
-
-.home-section .site-header.dark {
-	margin-top:0px;
-	background-color: transparent;
-}
-*/
-/* # Slider
-
-
-.slide_content{
-    padding: 0;
-    position: absolute;
-    width: 80%;
-    left: 10%;
-    text-align: center;
-    top: 20%;
-	color: $color-white;
-}
-
-.slide_content h2,
-.slide_content h3 {
-	color:$color-black;
-}
-
-.full-width-content .gridcontainer.fullscreen.Black {
-	    padding: 0px;
-}
-
-.full-width-content .gridcontainer.fullscreen.Black .slide_content h1 {
-	@include font(7.8, 7.8);
-	color:$color-primary;
-	text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.5);
-}
-.slide_content h2{
-    text-transform: uppercase;
-	max-width:1500px;
-	margin:0 auto;
-	word-wrap: break-word;
-}
-
-.slide_content p{
-	margin:40px auto;
-	width:60%;
-	@include font(2.6, 3);
-	font-weight:400;
-	color: $color-white;
-}
-
-.full-width-content .gridcontainer.fullscreen.Black .slide_content .button {
-    background-color: shade($color-primary, 20%);
-    color: $color-white;
-	text-transform:uppercase;
-}
-
-.gridcontainer .slide_content .button:before,
-.gridcontainer .slide_content .button:after,
-.gridcontainer .slide_content .button span:before,
-.gridcontainer .slide_content .button span:after {
-	background:$color-white;
-}
-
-.active .slide_content{
-	animation-delay: 0.5s;
-	
-	-webkit-animation: moveDown 1s ease-in-out both;
-	-moz-animation: moveDown 1s ease-in-out both;
-	-o-animation: moveDown 1s ease-in-out both;
-	-ms-animation: moveDown 1s ease-in-out both;
-	animation: moveDown 1s ease-in-out both;
-}
-
-.actice h2{
-	animation-delay: 0.5s;
-	
-	-webkit-animation: fadeIn 1s linear both;
-	-moz-animation: fadeIn 1s linear both;
-	-o-animation: fadeIn 1s linear both;
-	-ms-animation: fadeIn 1s linear both;
-	animation: fadeIn 1s linear both;
-}
-
-.frontpage-icon {
-	position:absolute;
-	bottom:100px;
-	left:48%;
-	animation-delay: 0.7s;
-}
-
-.frontpage-icon .icon-arrow-down5 {
+.home_top_image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60vh;
+  background-attachment: scroll;
+  background-color: #000000;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  padding: 30px; }
+  .home_top_image h1, .home_top_image h2 {
+    z-index: 150;
+    text-align: center; }
+  .home_top_image h1 {
+    font-size: 32px;
+    font-size: 3.2rem;
+    line-height: 32px;
+    line-height: 3.2rem;
+    font-weight: 300;
+    color: #fcfbf5; }
+    @media screen and (min-width: 37.5em) {
+      .home_top_image h1 {
+        font-size: 32px;
+        font-size: 3.2rem;
+        line-height: 32px;
+        line-height: 3.2rem; } }
+    @media screen and (min-width: 55.625em) {
+      .home_top_image h1 {
+        font-size: 32px;
+        font-size: 3.2rem;
+        line-height: 32px;
+        line-height: 3.2rem; } }
+    @media screen and (min-width: 64em) {
+      .home_top_image h1 {
+        font-size: 34px;
+        font-size: 3.4rem;
+        line-height: 34px;
+        line-height: 3.4rem; } }
+    @media screen and (min-width: 80em) {
+      .home_top_image h1 {
+        font-size: 38px;
+        font-size: 3.8rem;
+        line-height: 38px;
+        line-height: 3.8rem; } }
+    @media screen and (min-width: 93.75em) {
+      .home_top_image h1 {
+        font-size: 52px;
+        font-size: 5.2rem;
+        line-height: 52px;
+        line-height: 5.2rem; } }
+  .home_top_image h2 {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 20px;
+    line-height: 2rem;
+    font-weight: 300;
+    color: #fcfbf5; }
+    @media screen and (min-width: 37.5em) {
+      .home_top_image h2 {
+        font-size: 26px;
+        font-size: 2.6rem;
+        line-height: 26px;
+        line-height: 2.6rem; } }
+    @media screen and (min-width: 55.625em) {
+      .home_top_image h2 {
+        font-size: 26px;
+        font-size: 2.6rem;
+        line-height: 26px;
+        line-height: 2.6rem; } }
+    @media screen and (min-width: 64em) {
+      .home_top_image h2 {
+        font-size: 26px;
+        font-size: 2.6rem;
+        line-height: 26px;
+        line-height: 2.6rem; } }
+    @media screen and (min-width: 80em) {
+      .home_top_image h2 {
+        font-size: 26px;
+        font-size: 2.6rem;
+        line-height: 26px;
+        line-height: 2.6rem; } }
+    @media screen and (min-width: 93.75em) {
+      .home_top_image h2 {
+        font-size: 26px;
+        font-size: 2.6rem;
+        line-height: 26px;
+        line-height: 2.6rem; } }
+  .home_top_image .icon-arrow-down7 {
     width: 40px;
     height: 40px;
-	color:$color-black;
-}
---------------------------------------------------- */
-.statements {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  margin-top: 111px; }
+    fill: #fcfbf5; }
+  .home_top_image .bounce {
+    -moz-animation: bounce 2s;
+    -webkit-animation: bounce 2s;
+    animation: bounce 2s;
+    -moz-animation-iteration-count: 3;
+    -webkit-animation-iteration-count: 3;
+    animation-iteration-count: 3; }
+  .home_top_image .image_section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60vh;
+    background: linear-gradient(145deg, rgba(98, 136, 141, 0.75) 0%, rgba(0, 11, 18, 0) 75%);
+    z-index: 100; }
 
-.flip {
-  display: inline-block;
-  height: 50px;
-  overflow: hidden; }
-
-.flip > div > div {
-  color: #DC143C;
-  padding: 4px 12px;
-  height: 45px;
-  margin-bottom: 45px;
-  display: inline-block; }
-
-.flip div:first-child {
-  animation: show 10s 10s ease-in-out infinite; }
-
-@keyframes show {
-  0% {
-    margin-top: -270px; }
-  5% {
-    margin-top: -180px; }
-  33% {
-    margin-top: -180px; }
-  38% {
-    margin-top: -90px; }
-  66% {
-    margin-top: -90px; }
-  71% {
-    margin-top: 0px; }
-  99.99% {
-    margin-top: 0px; }
-  100% {
-    margin-top: -270px; } }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  60% {
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); } }
 
 /* # Grids
 --------------------------------------------------- */
@@ -5023,6 +5014,159 @@ p.entry-meta {
 ---------------------------------------------
 ---------------------------------------------
 --------------------------------------------- */
+@media only screen and (min-width: 37.5em) {
+  /* # Small screens
+---------------------------------------------------------------------------------------------------- */
+  /* ## 55.625emem / 890 pixel
+---------------------------------------------
+---------------------------------------------
+--------------------------------------------- */
+  /* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+  /* Grid fallback */
+  .footer-widgets .wrap .widget-area {
+    float: left;
+    width: 48.125%;
+    margin-bottom: 30px; }
+    .footer-widgets .wrap .widget-area:nth-child(n) {
+      margin-right: 3.75%; }
+    .footer-widgets .wrap .widget-area:nth-child(2n) {
+      margin-right: 0; }
+  /* Grid fallback end */
+  @supports (display: grid) {
+    /* Grid fallback reset */
+    .footer-widgets .wrap .widget-area {
+      float: none;
+      width: 100%;
+      margin-bottom: inherit; }
+      .footer-widgets .wrap .widget-area:nth-child(n) {
+        margin-right: 0%; }
+      .footer-widgets .wrap .widget-area:nth-child(1n) {
+        margin-right: 0; }
+    /* Grid fallback reset end */ }
+  /* ## Social Icons
+---------------------------------------------------------------------- */
+  /* # Defaults
+---------------------------------------------------------------------------------------------------- */
+  /* ## Typographical Elements
+---------------------------------------------------------------------- */
+  /* ## Headings
+---------------------------------------------------------------------- */
+  /* ## Objects
+---------------------------------------------------------------------- */
+  /* ## Forms
+---------------------------------------------------------------------- */
+  /* ## Tables
+---------------------------------------------------------------------- */
+  /* ## Screen Reader Text
+---------------------------------------------------------------------- */
+  /* # Structure, Layout and Grid
+---------------------------------------------------------------------------------------------------- */
+  /* ## Site Containers
+---------------------------------------------------------------------- */
+  /* ### Site Containers Full-width
+---------------------------------------------------------------------- */
+  /* ## Grid Containers
+---------------------------------------------------------------------- */
+  /* ### Grid Containers coloured backgrounds
+--------------------------------------------- */
+  /* @import "flexible_grids_small"; */
+  /* # Common Classes
+---------------------------------------------------------------------------------------------------- */
+  /* ## Avatar
+---------------------------------------------------------------------- */
+  /* ## Genesis
+---------------------------------------------------------------------- */
+  /* ## Titles
+---------------------------------------------------------------------- */
+  /* ## WordPress
+---------------------------------------------------------------------- */
+  /* # Widgets
+---------------------------------------------------------------------------------------------------- */
+  /* ## Featured Content
+---------------------------------------------------------------------- */
+  /* # Plugins
+---------------------------------------------------------------------------------------------------- */
+  /* ## Genesis eNews Extended
+---------------------------------------------------------------------- */
+  /* ## Skip Links
+---------------------------------------------------------------------- */
+  /* # Site Header
+---------------------------------------------------------------------------------------------------- */
+  /* ## Title Area
+---------------------------------------------------------------------- */
+  .header-full-width .title-area {
+    width: 240px; }
+  /* ## Widget Area
+---------------------------------------------------------------------- */
+  /* ## Before header
+---------------------------------------------------------------------- */
+  /* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+  /* ## Accessible Menu
+---------------------------------------------------------------------- */
+  /* ## Site Header Navigation
+---------------------------------------------------------------------- */
+  /* ## Primary Navigation
+---------------------------------------------------------------------- */
+  /* ## Secondary Navigation
+---------------------------------------------------------------------- */
+  /* ## Responsive Menu
+---------------------------------------------------------------------- */
+  /* ## Language Menu
+---------------------------------------------------------------------- */
+  /* # Content Area
+---------------------------------------------------------------------------------------------------- */
+  /* ## Entries
+---------------------------------------------------------------------- */
+  /* ## Buttons
+---------------------------------------------------------------------- */
+  /* ## Entry Meta
+---------------------------------------------------------------------- */
+  /* ## Pagination
+---------------------------------------------------------------------- */
+  /* ## Comments
+---------------------------------------------------------------------- */
+  /* ## Featured image
+---------------------------------------------------------------------- */
+  /* ## Case grid
+---------------------------------------------------------------------- */
+  /* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+  /* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+  /* ## Social Icons
+---------------------------------------------------------------------- */
+  /* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+  /* # Animations
+---------------------------------------------------------------------------------------------------- */
+  /* ## Keyframes
+---------------------------------------------------------------------- */
+  /* ### Move X and Roll 360 degrees
+--------------------------------------------- */
+  /* ### Move up
+--------------------------------------------- */
+  /* ### Move down
+--------------------------------------------- */
+  /* ### Fade in
+--------------------------------------------- */
+  /* ### Scale down
+--------------------------------------------- */
+  /* ### Fade out
+--------------------------------------------- */
+  /* ### Slide with opacity
+--------------------------------------------- */
+  /* ### Scale up
+--------------------------------------------- */ }
+
+/* # Small screens end
+---------------------------------------------------------------------------------------------------- */
+/* # Small screens
+----------------------------------------------------------------------------------------------------
+---------------------------------------------
+---------------------------------------------
+--------------------------------------------- */
 @media only screen and (min-width: 55.625em) {
   /* # Small screens
 ---------------------------------------------------------------------------------------------------- */
@@ -5124,6 +5268,8 @@ p.entry-meta {
 ---------------------------------------------------------------------------------------------------- */
   /* ## Title Area
 ---------------------------------------------------------------------- */
+  .header-full-width .title-area {
+    width: 280px; }
   /* ## Widget Area
 ---------------------------------------------------------------------- */
   /* ## Before header
@@ -6101,7 +6247,7 @@ p.entry-meta {
     margin-bottom: 30px; }
     .content-sidebar .site-inner .content-sidebar-wrap .content {
       float: left;
-      width: 65%; }
+      width: 84.7826086957%; }
       .content-sidebar .site-inner .content-sidebar-wrap .content .gridcontainer.coll2 section {
         float: left;
         width: 48.0769230769%; }
@@ -6139,13 +6285,13 @@ p.entry-meta {
           margin-right: 0; }
     .content-sidebar .site-inner .content-sidebar-wrap .sidebar-primary {
       float: right;
-      width: 32.5%; }
+      width: 42.3913043478%; }
   .sidebar-content .site-inner .content-sidebar-wrap {
     float: left;
     margin-bottom: 30px; }
     .sidebar-content .site-inner .content-sidebar-wrap .content {
       float: right;
-      width: 65%; }
+      width: 84.7826086957%; }
       .sidebar-content .site-inner .content-sidebar-wrap .content .gridcontainer.coll2 section {
         float: left;
         width: 48.0769230769%; }
@@ -6183,11 +6329,11 @@ p.entry-meta {
           margin-right: 0; }
     .sidebar-content .site-inner .content-sidebar-wrap .sidebar-primary {
       float: left;
-      width: 32.5%; }
+      width: 42.3913043478%; }
   .content-sidebar-sidebar .site-inner .content-sidebar-wrap {
     float: left;
     margin-bottom: 30px;
-    width: 81.25%; }
+    width: 105.97826087%; }
     .content-sidebar-sidebar .site-inner .content-sidebar-wrap .content {
       float: left;
       width: 72.7179487179%; }
@@ -6232,12 +6378,12 @@ p.entry-meta {
   .content-sidebar-sidebar .site-inner .sidebar-secondary {
     float: right;
     margin-top: 0px;
-    width: 16.25%;
+    width: 21.1956521739%;
     margin-bottom: 30px; }
   .sidebar-sidebar-content .site-inner .content-sidebar-wrap {
     float: right;
     margin-bottom: 30px;
-    width: 81.25%; }
+    width: 105.97826087%; }
     .sidebar-sidebar-content .site-inner .content-sidebar-wrap .content {
       float: right;
       width: 72.7179487179%; }
@@ -6282,12 +6428,12 @@ p.entry-meta {
   .sidebar-sidebar-content .site-inner .sidebar-secondary {
     float: left;
     margin-top: 0px;
-    width: 16.25%;
+    width: 21.1956521739%;
     margin-bottom: 30px; }
   .sidebar-content-sidebar .site-inner .content-sidebar-wrap {
     float: right;
     margin-bottom: 30px;
-    width: 81.25%; }
+    width: 105.97826087%; }
     .sidebar-content-sidebar .site-inner .content-sidebar-wrap .content {
       float: left;
       width: 72.7179487179%; }
@@ -6332,7 +6478,7 @@ p.entry-meta {
   .sidebar-content-sidebar .site-inner .sidebar-secondary {
     float: left;
     margin-top: 0px;
-    width: 16.25%;
+    width: 21.1956521739%;
     margin-bottom: 30px; }
   /* Fallback reset */
   @supports (display: grid) {
@@ -6484,41 +6630,41 @@ p.entry-meta {
   .full-width-content .content .gridcontainer.coll2 section {
     float: left;
     margin-bottom: 30px;
-    width: 48.75%; }
+    width: 48.3695652174%; }
     .full-width-content .content .gridcontainer.coll2 section:nth-child(n) {
-      margin-right: 2.5%; }
+      margin-right: 3.2608695652%; }
     .full-width-content .content .gridcontainer.coll2 section:nth-child(2n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.coll3 section {
     float: left;
     margin-bottom: 30px;
-    width: 31.6666666667%; }
+    width: 31.1594202899%; }
     .full-width-content .content .gridcontainer.coll3 section:nth-child(n) {
-      margin-right: 2.5%; }
+      margin-right: 3.2608695652%; }
     .full-width-content .content .gridcontainer.coll3 section:nth-child(3n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.coll4 section {
     float: left;
     margin-bottom: 30px;
-    width: 23.125%; }
+    width: 22.5543478261%; }
     .full-width-content .content .gridcontainer.coll4 section:nth-child(n) {
-      margin-right: 2.5%; }
+      margin-right: 3.2608695652%; }
     .full-width-content .content .gridcontainer.coll4 section:nth-child(4n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.coll5 section {
     float: left;
     margin-bottom: 30px;
-    width: 18%; }
+    width: 17.3913043478%; }
     .full-width-content .content .gridcontainer.coll5 section:nth-child(n) {
-      margin-right: 2.5%; }
+      margin-right: 3.2608695652%; }
     .full-width-content .content .gridcontainer.coll5 section:nth-child(5n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.coll6 section {
     float: left;
     margin-bottom: 30px;
-    width: 14.5833333333%; }
+    width: 13.9492753623%; }
     .full-width-content .content .gridcontainer.coll6 section:nth-child(n) {
-      margin-right: 2.5%; }
+      margin-right: 3.2608695652%; }
     .full-width-content .content .gridcontainer.coll6 section:nth-child(6n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.non.coll1 section,
@@ -6684,10 +6830,10 @@ p.entry-meta {
   /* Grid fallback */
   .footer-widgets .wrap .widget-area {
     float: left;
-    width: 23.125%;
+    width: 22.5543478261%;
     margin-bottom: 30px; }
     .footer-widgets .wrap .widget-area:nth-child(n) {
-      margin-right: 2.5%; }
+      margin-right: 3.2608695652%; }
     .footer-widgets .wrap .widget-area:nth-child(4n) {
       margin-right: 0; }
   /* Grid fallback end */
@@ -6725,20 +6871,20 @@ p.entry-meta {
   .content-sidebar-sidebar .site-inner,
   .sidebar-sidebar-content .site-inner,
   .sidebar-content-sidebar .site-inner {
-    max-width: 1200px;
+    max-width: 920px;
     margin-bottom: 60px; }
   /* ## Site Containers
 ---------------------------------------------------------------------- */
   /* ### Site Containers Full-width 
 --------------------------------------------- */
   .full-width-content .site-inner .content .entry {
-    max-width: 1200px; }
+    max-width: 920px; }
   /* ## Grid Containers
 ---------------------------------------------------------------------- */
   .gridcontainer .row_headline {
-    max-width: 1200px; }
+    max-width: 920px; }
   .gridcontainer .wrap {
-    max-width: 1200px; }
+    max-width: 920px; }
   .gridcontainer .backimage {
     min-height: 50vh; }
   @supports (display: grid) {
@@ -6776,7 +6922,7 @@ p.entry-meta {
 ---------------------------------------------------------------------- */
   .archive-description,
   .author-box {
-    max-width: 1200px; }
+    max-width: 920px; }
   /* ## Titles
 ---------------------------------------------------------------------- */
   /* ## WordPress
@@ -6795,7 +6941,7 @@ p.entry-meta {
 ---------------------------------------------------------------------------------------------------- */
   .site-header > .wrap {
     width: 90%;
-    max-width: 1200px; }
+    max-width: 920px; }
   /* ## Title Area
 ---------------------------------------------------------------------- */
   /* ## Widget Area
@@ -6838,7 +6984,7 @@ p.entry-meta {
   .comment-respond,
   .entry-comments,
   .entry-pings {
-    max-width: 1200px; }
+    max-width: 920px; }
   /* ## Featured image
 ---------------------------------------------------------------------- */
   /* ## Case grid
@@ -6848,7 +6994,7 @@ p.entry-meta {
   /* # Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
   .footer-widgets .wrap {
-    max-width: 1200px; }
+    max-width: 920px; }
   /* ## Social Icons
 ---------------------------------------------------------------------- */
   /* # Site Footer
@@ -6896,7 +7042,7 @@ p.entry-meta {
     margin-bottom: 40px; }
     .content-sidebar .site-inner .content-sidebar-wrap .content {
       float: left;
-      width: 64.7857142857%; }
+      width: 98.5869565217%; }
       .content-sidebar .site-inner .content-sidebar-wrap .content .gridcontainer.coll2 section {
         float: left;
         width: 47.7949283352%; }
@@ -6934,13 +7080,13 @@ p.entry-meta {
           margin-right: 0; }
     .content-sidebar .site-inner .content-sidebar-wrap .sidebar-primary {
       float: right;
-      width: 32.3571428571%; }
+      width: 49.2391304348%; }
   .sidebar-content .site-inner .content-sidebar-wrap {
     float: left;
     margin-bottom: 40px; }
     .sidebar-content .site-inner .content-sidebar-wrap .content {
       float: right;
-      width: 64.7857142857%; }
+      width: 98.5869565217%; }
       .sidebar-content .site-inner .content-sidebar-wrap .content .gridcontainer.coll2 section {
         float: left;
         width: 47.7949283352%; }
@@ -6978,11 +7124,11 @@ p.entry-meta {
           margin-right: 0; }
     .sidebar-content .site-inner .content-sidebar-wrap .sidebar-primary {
       float: left;
-      width: 32.3571428571%; }
+      width: 49.2391304348%; }
   .content-sidebar-sidebar .site-inner .content-sidebar-wrap {
     float: left;
     margin-bottom: 40px;
-    width: 80.9285714286%; }
+    width: 123.152173913%; }
     .content-sidebar-sidebar .site-inner .content-sidebar-wrap .content {
       float: left;
       width: 72.374227714%; }
@@ -7027,12 +7173,12 @@ p.entry-meta {
   .content-sidebar-sidebar .site-inner .sidebar-secondary {
     float: right;
     margin-top: 0px;
-    width: 16.2142857143%;
+    width: 24.6739130435%;
     margin-bottom: 40px; }
   .sidebar-sidebar-content .site-inner .content-sidebar-wrap {
     float: right;
     margin-bottom: 40px;
-    width: 80.9285714286%; }
+    width: 123.152173913%; }
     .sidebar-sidebar-content .site-inner .content-sidebar-wrap .content {
       float: right;
       width: 72.374227714%; }
@@ -7077,12 +7223,12 @@ p.entry-meta {
   .sidebar-sidebar-content .site-inner .sidebar-secondary {
     float: left;
     margin-top: 0px;
-    width: 16.2142857143%;
+    width: 24.6739130435%;
     margin-bottom: 40px; }
   .sidebar-content-sidebar .site-inner .content-sidebar-wrap {
     float: right;
     margin-bottom: 40px;
-    width: 80.9285714286%; }
+    width: 123.152173913%; }
     .sidebar-content-sidebar .site-inner .content-sidebar-wrap .content {
       float: left;
       width: 72.374227714%; }
@@ -7127,7 +7273,7 @@ p.entry-meta {
   .sidebar-content-sidebar .site-inner .sidebar-secondary {
     float: left;
     margin-top: 0px;
-    width: 16.2142857143%;
+    width: 24.6739130435%;
     margin-bottom: 40px; }
   /* Fallback reset */
   @supports (display: grid) {
@@ -7279,41 +7425,41 @@ p.entry-meta {
   .full-width-content .content .gridcontainer.coll2 section {
     float: left;
     margin-bottom: 40px;
-    width: 48.5714285714%; }
+    width: 47.8260869565%; }
     .full-width-content .content .gridcontainer.coll2 section:nth-child(n) {
-      margin-right: 2.8571428571%; }
+      margin-right: 4.347826087%; }
     .full-width-content .content .gridcontainer.coll2 section:nth-child(2n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.coll3 section {
     float: left;
     margin-bottom: 40px;
-    width: 31.4285714286%; }
+    width: 30.4347826087%; }
     .full-width-content .content .gridcontainer.coll3 section:nth-child(n) {
-      margin-right: 2.8571428571%; }
+      margin-right: 4.347826087%; }
     .full-width-content .content .gridcontainer.coll3 section:nth-child(3n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.coll4 section {
     float: left;
     margin-bottom: 40px;
-    width: 22.8571428571%; }
+    width: 21.7391304348%; }
     .full-width-content .content .gridcontainer.coll4 section:nth-child(n) {
-      margin-right: 2.8571428571%; }
+      margin-right: 4.347826087%; }
     .full-width-content .content .gridcontainer.coll4 section:nth-child(4n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.coll5 section {
     float: left;
     margin-bottom: 40px;
-    width: 17.7142857143%; }
+    width: 16.5217391304%; }
     .full-width-content .content .gridcontainer.coll5 section:nth-child(n) {
-      margin-right: 2.8571428571%; }
+      margin-right: 4.347826087%; }
     .full-width-content .content .gridcontainer.coll5 section:nth-child(5n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.coll6 section {
     float: left;
     margin-bottom: 40px;
-    width: 14.2857142857%; }
+    width: 13.0434782609%; }
     .full-width-content .content .gridcontainer.coll6 section:nth-child(n) {
-      margin-right: 2.8571428571%; }
+      margin-right: 4.347826087%; }
     .full-width-content .content .gridcontainer.coll6 section:nth-child(6n) {
       margin-right: 0; }
   .full-width-content .content .gridcontainer.non.coll1 section,
@@ -7479,10 +7625,10 @@ p.entry-meta {
   /* Grid fallback */
   .footer-widgets .wrap .widget-area {
     float: left;
-    width: 22.8571428571%;
+    width: 21.7391304348%;
     margin-bottom: 40px; }
     .footer-widgets .wrap .widget-area:nth-child(n) {
-      margin-right: 2.8571428571%; }
+      margin-right: 4.347826087%; }
     .footer-widgets .wrap .widget-area:nth-child(4n) {
       margin-right: 0; }
   /* Grid fallback end */
@@ -7520,7 +7666,7 @@ p.entry-meta {
   .content-sidebar-sidebar .site-inner,
   .sidebar-sidebar-content .site-inner,
   .sidebar-content-sidebar .site-inner {
-    max-width: 1400px;
+    max-width: 920px;
     margin-bottom: 80px; }
   /* ## Site Containers
 ---------------------------------------------------------------------- */
@@ -7539,13 +7685,13 @@ p.entry-meta {
   /* ### Site Containers Full-width 
 --------------------------------------------- */
   .full-width-content .site-inner .content .entry {
-    max-width: 1400px; }
+    max-width: 920px; }
   /* ## Grid Containers
 ---------------------------------------------------------------------- */
   .gridcontainer .row_headline {
-    max-width: 1400px; }
+    max-width: 920px; }
   .gridcontainer .wrap {
-    max-width: 1400px; }
+    max-width: 920px; }
   .gridcontainer .backimage {
     min-height: 50vh; }
   @supports (display: grid) {
@@ -7587,7 +7733,7 @@ p.entry-meta {
 ---------------------------------------------------------------------- */
   .archive-description,
   .author-box {
-    max-width: 1400px; }
+    max-width: 920px; }
   /* ## Titles
 ---------------------------------------------------------------------- */
   /* ## WordPress
@@ -7605,9 +7751,11 @@ p.entry-meta {
   /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
   .site-header > .wrap {
-    max-width: 1400px; }
+    max-width: 920px; }
   /* ## Title Area
 ---------------------------------------------------------------------- */
+  .header-full-width .title-area {
+    width: 320px; }
   /* ## Widget Area
 ---------------------------------------------------------------------- */
   /* ## Before header
@@ -7648,7 +7796,7 @@ p.entry-meta {
   .comment-respond,
   .entry-comments,
   .entry-pings {
-    max-width: 1400px; }
+    max-width: 920px; }
   /* ## Featured image
 ---------------------------------------------------------------------- */
   /* ## Case grid
@@ -7658,7 +7806,7 @@ p.entry-meta {
   /* # Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
   .footer-widgets .wrap {
-    max-width: 1400px; }
+    max-width: 920px; }
   /* ## Social Icons
 ---------------------------------------------------------------------- */
   /* # Site Footer

@@ -146,25 +146,19 @@
 
 /* ### Grid Containers coloured backgrounds
 --------------------------------------------- */
+.gridcontainer.cta-area{
+	.wysiwyg{
+		color: $color-white;
+		text-align: center;
+		padding: $margin-default+px;
+		background-color: $color-primary;
+	}
+}
 .gridcontainer.light{
 	background-color: $g_gridcontainer-light;
 	color: $g_gridcontainer-light-font-color;
 	.row_headline{
 		color: $g_gridcontainer-light-font-color;
-	}
-	.wrap{
-		section.wysiwyg{
-			padding: $margin-default+px;
-			background-color: shade($g_gridcontainer-light, 20%);
-		}
-	}
-	&.non{
-		.wrap{
-			section.wysiwyg{
-				padding: 0;
-				background-color: transparent;;
-			}
-		}
 	}
 }
 
@@ -174,21 +168,9 @@
 	.row_headline{
 		color: $g_gridcontainer-dark-font-color;
 	}
-	.wrap{
-		section.wysiwyg{
-			padding: $margin-default+px;
-			background-color: $g_gridcontainer-dark;
-		}
-	}
 	&.non{
 		.entry-title{
 			color: tint($g_gridcontainer-dark-font-color, 100%);
-		}
-		.wrap{
-			section.wysiwyg{
-				padding: 0;
-				background-color: transparent;;
-			}
 		}
 	}
 }
@@ -199,21 +181,9 @@
 	.row_headline{
 		color: $g_gridcontainer-medium-font-color;
 	}
-	.wrap{
-		section.wysiwyg{
-			padding: $margin-default+px;
-			background-color: shade($g_gridcontainer-medium, 20%);
-		}
-	}
 	&.non{
 		.entry-title{
 			color: tint($g_gridcontainer-medium-font-color, 100%);
-		}
-		.wrap{
-			section.wysiwyg{
-				padding: 0;
-				background-color: transparent;;
-			}
 		}
 	}
 }

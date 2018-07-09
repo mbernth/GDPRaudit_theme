@@ -32,6 +32,31 @@ remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 //* Force full width content
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
+
+//* Top Image Area
+// =====================================================================================================================
+
+add_action( 'genesis_after_header', 'mono_frontpage_top_image_area' );
+function mono_frontpage_top_image_area() {
+	$top_image = get_field( 'top_image' );
+	$headline = get_field('headline');
+	$subheadline = get_field('sub_headline');
+
+	if ($top_image){
+		echo '<div class="home_top_image" style="background-image:url('.$top_image['url'].');">';
+			if ($headline){
+				echo '<h1>'.$headline.'</h1>';
+			}
+			if ($subheadline){
+				echo '<h2>'.$subheadline.'</h2>';
+			}
+			echo '<span class="bounce"><svg class="icon-arrow-down7"><use xlink:href="#icon-arrow-down7"></use></svg></span>';
+			echo '<div class="image_section"></div>';
+		echo '</div>';
+	}
+}
+
+
 //* Top Slider
 // =====================================================================================================================
 

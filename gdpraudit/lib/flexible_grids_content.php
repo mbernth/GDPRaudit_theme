@@ -25,6 +25,25 @@ function mono_flexible_grids() {
 			$rowbuttonmanual = get_sub_field('row_button_manual_url');
 			$rowtext = 	get_sub_field('row_button_clone');
 			$coll = get_sub_field('columns_no');
+			$ctaphone = get_sub_field('call_to_action_phone');
+			$ctacontent = get_sub_field('call_to_action_content');
+
+
+			if( get_row_layout() == 'call_to_action' ):
+				$hide_cta_array = get_sub_field( 'hide_cta' );
+
+				if (get_sub_field(''.$hide_cta_array.'')){
+				}else{
+					echo '<article class="gridcontainer cta-area coll1">';
+						echo '<div class="wrap">';
+							echo '<section class="wysiwyg">';
+								echo '<h2>Ring <a href="tel:'.$ctaphone.'">'.$ctaphone.'</a></h2>';
+								echo ''.$ctacontent.'';
+							echo '</section>';
+						echo '</div>';
+					echo '</article>';
+				}
+			endif;
 
         	if( get_row_layout() == 'row_setup' ):
 			
@@ -43,7 +62,7 @@ function mono_flexible_grids() {
 				echo '" >';
 				// Add row headline
 				if ($headline){
-					echo '<h1 class="row_headline">' . $headline . '</h1>';
+					echo '<h2 class="row_headline">' . $headline . '</h2>';
 				}
 				
 				
@@ -62,7 +81,7 @@ function mono_flexible_grids() {
 									
 									if( ($selected == 'non dark' || $selected == 'non medium' || $selected == 'non light' || $selected == 'non')){
 										if($headline){
-										echo '<h1 class="entry-title">' . $headline . '</h1>';
+										echo '<h2 class="entry-title">' . $headline . '</h2>';
 										}
 									}
 									
@@ -79,8 +98,8 @@ function mono_flexible_grids() {
 									}
 								echo '</section>';
 							}
-							
-							
+
+
 							// Image fields
 							if (get_sub_field('image_link')){
 								// Image Array

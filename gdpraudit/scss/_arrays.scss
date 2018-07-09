@@ -173,6 +173,23 @@ $g_font-archive-title: (
 );
 
 /* Entry title */
+$g_font-home-title: (
+    null   : (3.2, 3.2, 300, $color-white),
+    xsmall : (3.2, 3.2),
+    small  : (3.2, 3.2),
+    medium : (3.4, 3.4),
+    large  : (3.8, 3.8),
+    xlarge : (5.2, 5.2)
+);
+$g_font-home-sub-title: (
+    null   : (2.0, 2.0, 300, $color-white),
+    xsmall : (2.6, 2.6),
+    small  : (2.6, 2.6),
+    medium : (2.6, 2.6),
+    large  : (2.6, 2.6),
+    xlarge : (2.6, 2.6)
+);
+
 $g_font-entry-title: (
     null   : (3.2, 3.2, 300, $color-black),
     xsmall : (3.2, 3.2),

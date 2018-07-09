@@ -2,7 +2,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	position:fixed;
+	position: absolute;;
 	margin-top:0px;
 	padding: 40px 0;
 	width:100%;
@@ -54,7 +54,6 @@
 
 .title-area {
 	float: left;
-	margin-left: 5%;
 	p {
     margin: 0;
     font-size: 0;

@@ -6,7 +6,7 @@
 
 
 
-@media only screen and (min-width: $mq-small) {
+@media only screen and (min-width: $mq-xsmall) {
 	
 @import "flexible_grids_fallback_small";
 	
@@ -30,37 +30,10 @@
 ---------------------------------------------------------------------------------------------------- */
 /* ## Site Containers
 ---------------------------------------------------------------------- */
-.site-inner{
-	width: 100%;
-}
-.content-sidebar .site-inner,
-.sidebar-content .site-inner,
-.content-sidebar-sidebar .site-inner,
-.sidebar-sidebar-content .site-inner,
-.sidebar-content-sidebar .site-inner{
-	width: 90%;
-	max-width: $target-small+px;
-}
 /* ### Site Containers Full-width
 ---------------------------------------------------------------------- */
-.full-width-content .site-inner .content .entry{
-	max-width: $target-small+px;
-}
 /* ## Grid Containers
 ---------------------------------------------------------------------- */
-.gridcontainer{
-	.row_headline{
-		max-width: $target-small+px;
-	}
-	.wrap{
-		max-width: $target-small+px;
-	}
-}
-.gridcontainer.non{
-	.wrap{
-		max-width: 100%;
-	}
-}
 /* ### Grid Containers coloured backgrounds
 --------------------------------------------- */
 /* @import "flexible_grids_small"; */
@@ -71,10 +44,6 @@
 ---------------------------------------------------------------------- */
 /* ## Genesis
 ---------------------------------------------------------------------- */
-.archive-description,
-.author-box {
-	max-width: $target-small+px;
-}
 /* ## Titles
 ---------------------------------------------------------------------- */
 /* ## WordPress
@@ -97,7 +66,7 @@
 /* ## Title Area
 ---------------------------------------------------------------------- */
 .header-full-width .title-area {
-	width: 280px;
+	width: 240px;
 }
 
 /* ## Widget Area
@@ -124,20 +93,6 @@
 ---------------------------------------------------------------------------------------------------- */
 /* ## Entries
 ---------------------------------------------------------------------- */
-.archive .site-inner{
-	float: left;
-	margin-bottom: 40px;
-}
-/*
-.content .post{
-	img{
-		float: left;
-		margin-right: $margin-small+px;
-		@include structure(385, $target-small);
-		margin-bottom: inherit;
-	}
-}
-*/
 /* ## Buttons
 ---------------------------------------------------------------------- */
 /* ## Entry Meta
@@ -146,11 +101,6 @@
 ---------------------------------------------------------------------- */
 /* ## Comments
 ---------------------------------------------------------------------- */
-.comment-respond,
-.entry-comments,
-.entry-pings {
-	max-width: $target-small+px;
-}
 /* ## Featured image
 ---------------------------------------------------------------------- */
 /* ## Case grid
@@ -161,17 +111,6 @@
 
 /* # Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
-.footer-widgets .wrap {
-	max-width: $target-small+px;
-}
-	
-@supports (display: grid) {
-	.footer-widgets .wrap {
-		display: grid;
-		grid-template-columns:repeat(2, 1fr);
-		grid-gap:$margin-small+px;
-	}
-}
 /* ## Social Icons
 ---------------------------------------------------------------------- */
 
