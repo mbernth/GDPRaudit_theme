@@ -175,6 +175,44 @@
 		"oAP": "\/gdpraudit\/fonts\/12-brother1816-bold_italic-web.woff2",
 		"oF": 0
 		},
+	"\/gdpraudit\/fonts\/15-brother1816-black-web.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpraudit\/fonts\/15-brother1816-black-web.eot",
+		"oF": 0
+		},
+	"\/gdpraudit\/fonts\/15-brother1816-black-web.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/gdpraudit\/fonts\/15-brother1816-black-web.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/gdpraudit\/fonts\/15-brother1816-black-Web.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpraudit\/fonts\/15-brother1816-black-Web.ttf",
+		"oF": 0
+		},
+	"\/gdpraudit\/fonts\/15-brother1816-black-web.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpraudit\/fonts\/15-brother1816-black-web.woff",
+		"oF": 0
+		},
+	"\/gdpraudit\/fonts\/15-brother1816-black-web.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpraudit\/fonts\/15-brother1816-black-web.woff2",
+		"oF": 0
+		},
 	"\/gdpraudit\/fonts\/Intervogue-Black.eot": {
 		"cB": 0,
 		"ft": 8192,
@@ -235,6 +273,37 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/gdpraudit\/fonts\/Intervogue-Ultra.woff",
+		"oF": 0
+		},
+	"\/gdpraudit\/fonts\/Mohr-Black.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpraudit\/fonts\/Mohr-Black.eot",
+		"oF": 0
+		},
+	"\/gdpraudit\/fonts\/Mohr-Black.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/gdpraudit\/fonts\/Mohr-Black.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/gdpraudit\/fonts\/Mohr-Black.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpraudit\/fonts\/Mohr-Black.ttf",
+		"oF": 0
+		},
+	"\/gdpraudit\/fonts\/Mohr-Black.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpraudit\/fonts\/Mohr-Black.woff",
 		"oF": 0
 		},
 	"\/gdpraudit\/functions.php": {

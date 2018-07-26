@@ -102,9 +102,17 @@
 .site-logo {
     display: block;
 }
-#site-logo{
-	width: 170px;
-	height: 20px;
+#logo{
+	//width: 170px;
+	//height: 20px;
+	#gdpr,
+	.cls-1{
+		fill: tint($color-primary, 80%);
+	}
+	#audit,
+	.cls-2{
+		fill: tint($color-secondary, 80%);
+	}
 }
 
 

@@ -104,6 +104,7 @@
 		width: 90%;
     	margin: 0 auto;
 		margin: 0 auto 20px;
+		text-align: center;
 	}
 	.wrap{
 		width: 90%;
@@ -111,6 +112,24 @@
 		section{
 			padding: 30px 0 0;
 		}
+	}
+	&.clip{
+		&::before{
+			position: absolute;
+			content:'';
+			top: calc(-15vh + 1px);
+			display:block;
+			height:15vh;
+			width:100%;
+			-webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+			clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+		}
+	}
+	&.clip-top{
+		padding-top: 15vh;
+	}
+	&.clip-bottom{
+		padding-bottom: 15vh;
 	}
 }
 .gridcontainer.non{
@@ -157,8 +176,14 @@
 .gridcontainer.light{
 	background-color: $g_gridcontainer-light;
 	color: $g_gridcontainer-light-font-color;
-	.row_headline{
-		color: $g_gridcontainer-light-font-color;
+	&.clip{
+		&::before{
+			background-color:$g_gridcontainer-light;
+		}
+	}
+	.row_headline,
+	h1, h2, h3, h4, h5, h6{
+		color: shade($color-primary, 40%);
 	}
 }
 

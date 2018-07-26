@@ -164,7 +164,7 @@ return $args;
 unregister_sidebar( 'header-right' );
 
 //* Add support for 3-column footer widgets
-add_theme_support( 'genesis-footer-widgets', 4 );
+add_theme_support( 'genesis-footer-widgets', 1 );
 
 //* Register widget areas
 genesis_register_sidebar( array(

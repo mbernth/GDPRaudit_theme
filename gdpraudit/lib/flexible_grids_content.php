@@ -27,14 +27,22 @@ function mono_flexible_grids() {
 			$coll = get_sub_field('columns_no');
 			$ctaphone = get_sub_field('call_to_action_phone');
 			$ctacontent = get_sub_field('call_to_action_content');
-
+			$clip_path_element_array = get_sub_field( 'clip_path_element' );
 
 			if( get_row_layout() == 'call_to_action' ):
 				$hide_cta_array = get_sub_field( 'hide_cta' );
+				$clip_path_element_margins_array = get_sub_field( 'clip_path_element_margins' );
 
 				if (get_sub_field(''.$hide_cta_array.'')){
 				}else{
-					echo '<article class="gridcontainer cta-area coll1">';
+					echo '<article class="gridcontainer cta-area coll1';
+					if ( $clip_path_element_margins_array ):
+						foreach ( $clip_path_element_margins_array as $clip_path_element_margins_item ):
+							echo ' ';
+							echo $clip_path_element_margins_item;
+						endforeach;
+					endif;
+					echo '">';
 						echo '<div class="wrap">';
 							echo '<section class="wysiwyg">';
 								echo '<h2>Ring <a href="tel:'.$ctaphone.'">'.$ctaphone.'</a></h2>';
@@ -55,6 +63,12 @@ function mono_flexible_grids() {
 				echo '<article class="gridcontainer  ';
 						the_sub_field('background_colour');
 						echo ' coll' . $coll . '';
+						if ( $clip_path_element_array ):
+							foreach ( $clip_path_element_array as $clip_path_element_item ):
+								 echo ' ';
+								 echo $clip_path_element_item;
+							endforeach;
+						endif;
 					if (get_sub_field('row_id')){
 						echo '" id="';
 					 	the_sub_field('row_id');

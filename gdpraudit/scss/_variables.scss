@@ -5,36 +5,36 @@
 ---------------------------------------------------------------------- */
 
 /* Black */
-$color-black: #04090c; /* Black */
-$color-black_rgb: rgba(4, 9, 12, 1); /* Black */
+$color-black: #0D2322; /* Black */
+$color-black_rgb: rgba(13,35,34, 1); /* Black */
 
 /* White */
-$color-white: #fcfbf5;
-$color-black_rgb: rgba(252, 251, 245, 1) ; /* White */
+$color-white: #FDFFFC;
+$color-black_rgb: rgba(253,255,252, 1) ; /* White */
 
 /* Primary */
-$color-primary: #142e3d; /* Colour */
-$color-primary_rgb: rgba(20, 46, 61, 1) ; /* Colour */
+$color-primary: #44BFB7; /* Colour */
+$color-primary_rgb: rgba(68,191,183, 1) ; /* Colour */
 
 /* Secondary */
-$color-secondary: #f1eacf; /* Colour */
-$color-secondary_rgb: rgba(241, 234, 207, 1) ; /* Colour */
+$color-secondary: #A6EBC9; /* Colour */
+$color-secondary_rgb: rgba(166,235,201, 1) ; /* Colour */
 
 /* Active - Active/Focuced*/
-$color-active: #62888d; /* Colour */
-$color-active_rgb: rgba(98, 136, 141, 1) ; /* Colour */
+$color-active: #87BB2D; /* Colour */
+$color-active_rgb: rgba(135,187,45, 1) ; /* Colour */
 
 /* Accent 1 - Error/Alert */
 $color-accent-one: #bf312d; /* Colour */
 $color-accent-one_rgb: rgba(191, 49, 45, 1) ; /* Colour */
 
 /* Accent 2 - Warning */
-$color-accent-two: #dec955; /* Colour */
-$color-accent-two_rgb: rgba(222, 201, 85, 1) ; /* Colour */
+$color-accent-two: #F3DE2C; /* Colour */
+$color-accent-two_rgb: rgba(243,222,44, 1) ; /* Colour */
 
 /* Accent 3 - Sucess */
-$color-accent-three: #749e7e; /* Colour */
-$color-accent-three_rgb: rgba(116, 158, 126, 1) ; /* Colour */
+$color-accent-three: #9FC957; /* Colour */
+$color-accent-three_rgb: rgba(159,201,87, 1) ; /* Colour */
 
 /* ## Defaults Globals
 ---------------------------------------------------------------------- */
@@ -97,12 +97,12 @@ $g_body-background-color:$color-white;
          font-style: italic;
 }
 @font-face {
-    font-family: 'cerabasic-black-webfont';
-    src: url('fonts/cerabasic-black-webfont.eot'); /* IE9 Compat Modes */
-    src: url('fonts/cerabasic-black-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/cerabasic-black-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-         url('fonts/cerabasic-black-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('fonts/cerabasic-black-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'Mohr-Black';
+    src: url('fonts/Mohr-Black.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Mohr-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Mohr-Black.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/Mohr-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/Mohr-Black.svg#svgFontName') format('svg'); /* Legacy iOS */
          font-weight: normal;
          font-style: normal;
 }
@@ -110,18 +110,18 @@ $g_body-background-color:$color-white;
 /* Global Font Faminly */
 $font-bread: '05-brother1816-book-web', Helvetica, Arial, sans-serif;
 $font-bold: '11-brother1816-bold-web', Helvetica, Arial, sans-serif;
-$font-headlines: 'Intervogue-Black', Helvetica, Arial, sans-serif;
-$font-navigation: 'Intervogue-Black', Helvetica, Arial, sans-serif;
+$font-headlines: 'Mohr-Black', Helvetica, Arial, sans-serif;
+$font-navigation: 'Mohr-Black', Helvetica, Arial, sans-serif;
 
 /*** Global Default values ***/
 
 /* Default body text */
-$g_font-bread-a-color:$color-secondary;
-$g_font-bread-a-hover-color:tint($color-secondary, 40%);
+$g_font-bread-a-color:$color-primary;
+$g_font-bread-a-hover-color:tint($color-primary, 40%);
 
 /* Mark */
 $g_font-mark-color:$color-white;
-$g_font-mark-background-color:$color-secondary;
+$g_font-mark-background-color:$color-primary;
 
 /* Button */
 $g_font-button_radius: 5;
@@ -150,10 +150,10 @@ $g_font-button-info-color-hover: $color-white;
 $g_font-button-info-background-color-hover: tint($color-black, 20%);
 $g_font-button-info-box-shadow-hover:0px 5px 3px 0px rgba(14, 28, 45, 0.25);
 
-$g_font-button-alert-background-color: $color-accent-three;
+$g_font-button-alert-background-color: $color-accent-one;
 $g_font-button-alert-color: $color-white;
 $g_font-button-alert-color-hover: $color-white;
-$g_font-button-alert-background-color-hover: tint($color-accent-three, 20%);
+$g_font-button-alert-background-color-hover: tint($color-accent-one, 20%);
 $g_font-button-alert-box-shadow-hover:0px 5px 3px 0px rgba(14, 28, 45, 0.25);
 
 /* ## Border Radius
@@ -163,12 +163,12 @@ $radius: 5;
 
 /* ## Colored Gridcontainer
 ---------------------------------------------------------------------- */
-$g_gridcontainer-light:shade($color-white, 10%);
+$g_gridcontainer-light:shade($color-secondary, 0%);
 $g_gridcontainer-light-font-color: $color-black;
-$g_gridcontainer-medium:$color-secondary;
+$g_gridcontainer-medium:$color-primary;
 $g_gridcontainer-medium-font-color: $color-white;
-$g_gridcontainer-dark: tint($color-black, 10%);
-$g_gridcontainer-dark-font-color: tint($color-black, 80%);
+$g_gridcontainer-dark: tint($color-black, 0%);
+$g_gridcontainer-dark-font-color: tint($color-white, 0%);
 
 /* ## Media Queries
 ---------------------------------------------------------------------- */

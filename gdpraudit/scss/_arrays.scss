@@ -27,7 +27,7 @@ $g_font-bread: (
 
 /* Headlines */
 $g_font-h1: (
-    null   : (3.2, 3.2, normal, $color-black),
+    null   : (3.2, 3.2, normal, $color-primary),
     // xsmall : (3.2, 3.2),
     // small  : (3.2, 2.2),
     // medium : (3.2, 3.2),
@@ -35,7 +35,7 @@ $g_font-h1: (
     xlarge : (4.2, 4.2)
 );
 $g_font-h2: (
-    null   : (2.8, 2.8, 300, $color-black),
+    null   : (2.8, 2.8, 300, $color-primary),
     // xsmall : (2.8, 2.8),
     // small  : (2.8, 2.8),
     // medium : (2.8, 2.8),
@@ -43,7 +43,7 @@ $g_font-h2: (
     xlarge : (3.6, 3.6)
 );
 $g_font-h3: (
-    null   : (2.6, 2.6, 300, $color-black),
+    null   : (2.6, 2.6, 300, $color-primary),
     // xsmall : (2.6, 2.6),
     // small  : (2.6, 2.6),
     // medium : (2.6, 2.6),
@@ -51,7 +51,7 @@ $g_font-h3: (
     xlarge : (3.0, 3.0)
 );
 $g_font-h4: (
-    null   : (2.4, 2.4, 300, $color-black),
+    null   : (2.4, 2.4, 300, $color-primary),
     // xsmall : (2.4, 2.4),
     // small  : (2.4, 2.4),
     // medium : (2.4, 2.4),
@@ -59,7 +59,7 @@ $g_font-h4: (
     xlarge : (2.6, 2.6)
 );
 $g_font-h5: (
-    null   : (2.2, 2.2, 300, $color-black),
+    null   : (2.2, 2.2, 300, $color-primary),
     // xsmall : (2.2, 2.2),
     // small  : (2.2, 2.2),
     // medium : (2.2, 2.2),
@@ -67,7 +67,7 @@ $g_font-h5: (
     // xlarge : (2.2, 2.2)
 );
 $g_font-h6: (
-    null   : (2, 2, 300, $color-black),
+    null   : (2, 2, 300, $color-primary),
     // xsmall : (2, 2),
     // small  : (2, 2),
     // medium : (2, 2),
@@ -164,7 +164,7 @@ $g_font-author: (
 
 /* Archive title */
 $g_font-archive-title: (
-    null   : (3.2, 3.2, 300, $color-black),
+    null   : (3.2, 3.2, 300, $color-primary),
     xsmall : (3.2, 3.2),
     small  : (3.2, 3.2),
     medium : (3.4, 3.4),
@@ -191,12 +191,12 @@ $g_font-home-sub-title: (
 );
 
 $g_font-entry-title: (
-    null   : (3.2, 3.2, 300, $color-black),
+    null   : (3.2, 3.2, 300, $color-primary),
     xsmall : (3.2, 3.2),
     small  : (3.2, 3.2),
     medium : (3.4, 3.4),
     large  : (3.8, 3.8),
-    xlarge : (5.2, 5.2)
+    xlarge : (5.8, 5.8)
 );
 
 /* Widget title */
@@ -289,7 +289,7 @@ $g_font-comment-header: (
 
 /* Global Footer Widgets values */
 $g_font-footer-widgets: (
-    null   : (1.4, 2.4, 300),
+    null   : (1.4, 2.4, 300, $color-white),
     // xsmall : (1.4, 2.3),
     // small  : (1.4, 2.3),
     // medium : (1.4, 2.3),
@@ -299,7 +299,7 @@ $g_font-footer-widgets: (
 
 /* Global Site Footer values */
 $g_font-site-footer: (
-    null   : (1, 1.2, 600),
+    null   : (1, 1.2, 600, $color-white),
     // xsmall : (1, 1.2),
     // small  : (1, 1.2),
     // medium : (1, 1.2),
