@@ -79,6 +79,13 @@
 	background-color:transparent;
 }
 
+.page-template-default.full-width-content .site-inner .content .entry{
+	max-width: 640px;
+	.entry-content{
+		margin-bottom: 130px;
+	}
+}
+
 /* ### Site Containers Full-width
 --------------------------------------------- */
 

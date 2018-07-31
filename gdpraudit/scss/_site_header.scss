@@ -7,7 +7,7 @@
 	padding: 40px 0;
 	width:100%;
 	float:left;
-	background-color: rgba(253, 254, 255, 0);
+	background-color: rgba(0, 0, 0, 0);
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition:    all 0.5s ease-in-out;
 	-ms-transition:     all 0.5s ease-in-out;
@@ -38,6 +38,9 @@
 	justify-content: space-between;
 	margin:0 auto;
 	max-width:100%;
+}
+.featured-image .site-header > .wrap {
+    justify-content: center;
 }
 .site-header.headroom,
 .site-header.headroom--unpinned:hover{

@@ -2728,6 +2728,11 @@ th {
 .sidebar-secondary {
   background-color: transparent; }
 
+.page-template-default.full-width-content .site-inner .content .entry {
+  max-width: 640px; }
+  .page-template-default.full-width-content .site-inner .content .entry .entry-content {
+    margin-bottom: 130px; }
+
 /* ### Site Containers Full-width
 --------------------------------------------- */
 .full-width-content .site-inner {
@@ -3812,6 +3817,159 @@ img.alignright,
     opacity: 0;
     transform: scale(1.5); } }
 
+#CybotCookiebotDialog {
+  font-family: "05-brother1816-book-web", Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-size: 1.4rem !important;
+  line-height: 22px !important;
+  line-height: 2.2rem !important;
+  color: #1b4c49 !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  background-color: #9FC957 !important;
+  box-shadow: 0px -5px 3px 0px rgba(14, 28, 45, 0.25) !important;
+  -webkit-animation: moveGDPRup 1s ease-in-out both !important;
+  -moz-animation: moveGDPRup 1s ease-in-out both !important;
+  -o-animation: moveGDPRup 1s ease-in-out both !important;
+  -ms-animation: moveGDPRup 1s ease-in-out both !important;
+  animation: moveGDPRup 1s ease-in-out both !important; }
+
+#CybotCookiebotDialogBody {
+  padding: 10px !important; }
+
+#CybotCookiebotDialog div {
+  font-family: "05-brother1816-book-web", Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-size: 1.4rem !important;
+  line-height: 22px !important;
+  line-height: 2.2rem !important;
+  color: #1b4c49 !important; }
+
+#CybotCookiebotDialogBodyContentTitle {
+  font-family: "Mohr-Black", Helvetica, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-size: 1.8rem !important;
+  line-height: 26px !important;
+  line-height: 2.6rem !important;
+  color: #1b4c49 !important; }
+
+#CybotCookiebotDialogPoweredbyLink {
+  width: 40px !important; }
+
+#CybotCookiebotDialogPoweredbyImage {
+  width: 35px !important; }
+
+#CybotCookiebotDialogBodyContent {
+  padding: 12px 0 8px 66px !important; }
+
+#CybotCookiebotDialogBodyButtons a,
+#CybotCookiebotDialogBodyButtons a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: all 0.6s ease-in-out !important;
+  -moz-transition: all 0.6s ease-in-out !important;
+  -ms-transition: all 0.6s ease-in-out !important;
+  -o-transition: all 0.6s ease-in-out !important;
+  transition: all 0.6s ease-in-out !important; }
+
+#CybotCookiebotDialogBodyButtonAccept {
+  display: block !important;
+  float: left !important;
+  background-color: #0e2625 !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 18px !important;
+  margin: 10px 0 10px !important;
+  max-width: 120px !important; }
+
+a#CybotCookiebotDialogBodyButtonAccept:hover {
+  background-color: #1b4c49 !important;
+  box-shadow: 0px 5px 3px 0px rgba(14, 28, 45, 0.25) !important; }
+
+#CybotCookiebotDialogBodyButtonDetails {
+  margin-top: 20px !important;
+  font-family: "05-brother1816-book-web", Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-size: 1.4rem !important;
+  line-height: 22px !important;
+  line-height: 2.2rem !important;
+  color: #1b4c49 !important; }
+
+#CybotCookiebotDialogDetail {
+  background-color: #b2d479 !important;
+  padding-top: 20px !important; }
+
+.CybotCookiebotDialogDetailBodyContentTabsItem,
+.CybotCookiebotDialogDetailBodyContentTabsItemSelected {
+  border-right: 1px solid #7fa146 !important; }
+
+.CybotCookiebotDialogDetailBodyContentTab:first-child {
+  border-left: 1px solid #7fa146 !important;
+  border-radius: 5px 0 0 !important; }
+
+.CybotCookiebotDialogDetailBodyContentCookieContainerTypesSelected,
+.CybotCookiebotDialogDetailBodyContentTabsItemSelected {
+  background-color: #ecf4dd !important; }
+
+#CybotCookiebotDialogDetailBodyContentTabs a.CybotCookiebotDialogDetailBodyContentTabsItem:hover {
+  background-color: #ecf4dd !important; }
+
+#CybotCookiebotDialogDetailBodyContent {
+  background-color: #ecf4dd !important; }
+
+.CybotCookiebotDialogDetailBodyContentTabsItem {
+  background-color: #c5df9a !important; }
+
+.CybotCookiebotDialogDetailBodyContentCookieContainerTypes {
+  background-color: #c5df9a !important;
+  border-bottom: 1px solid #7fa146 !important;
+  border-right: 1px solid #7fa146 !important; }
+
+#CybotCookiebotDialogDetailBodyContent {
+  border: 1px solid #7fa146 !important; }
+
+/* ### Move up
+--------------------------------------------- */
+@-webkit-keyframes moveGDPRup {
+  0% {
+    -webkit-transform: translateY(100%);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0%);
+    opacity: 1; } }
+
+@-moz-keyframes moveGDPRup {
+  0% {
+    -moz-transform: translateY(100%);
+    opacity: 0; }
+  100% {
+    -moz-transform: translateY(0%);
+    opacity: 1; } }
+
+@-o-keyframes moveGDPRup {
+  0% {
+    -o-transform: translateY(100%);
+    opacity: 0; }
+  100% {
+    -o-transform: translateY(0%);
+    opacity: 1; } }
+
+@-ms-keyframes moveGDPRup {
+  0% {
+    -ms-transform: translateY(100%);
+    opacity: 0; }
+  100% {
+    -ms-transform: translateY(0%);
+    opacity: 1; } }
+
+@keyframes moveGDPRup {
+  0% {
+    transform: translateY(100%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
+
 /*
 	
 	@import "plugins/timeline";
@@ -3837,7 +3995,7 @@ img.alignright,
   padding: 40px 0;
   width: 100%;
   float: left;
-  background-color: rgba(253, 254, 255, 0);
+  background-color: transparent;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
@@ -3864,6 +4022,9 @@ img.alignright,
   justify-content: space-between;
   margin: 0 auto;
   max-width: 100%; }
+
+.featured-image .site-header > .wrap {
+  justify-content: center; }
 
 .site-header.headroom,
 .site-header.headroom--unpinned:hover {
@@ -4350,11 +4511,23 @@ p.entry-meta {
 
 .featured-section .image-section {
   position: relative;
-  height: 100vh; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; }
   .featured-section .image-section .entry-title {
+    color: #FDFFFC;
+    text-align: center; }
+  .featured-section .image-section::after {
     position: absolute;
-    left: 5%;
-    bottom: 60px; }
+    bottom: -1px;
+    content: '';
+    display: block;
+    background-color: #FDFFFC;
+    height: 15vh;
+    width: 100%;
+    -webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%); }
 
 .image-section {
   background: linear-gradient(145deg, rgba(82, 185, 233, 0.75) 0%, rgba(0, 11, 18, 0) 75%); }
