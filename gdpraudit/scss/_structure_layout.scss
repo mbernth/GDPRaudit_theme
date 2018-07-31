@@ -82,7 +82,7 @@
 .page-template-default.full-width-content .site-inner .content .entry{
 	max-width: 640px;
 	.entry-content{
-		margin-bottom: 130px;
+		margin-bottom: 15vh;
 	}
 }
 
@@ -173,11 +173,20 @@
 /* ### Grid Containers coloured backgrounds
 --------------------------------------------- */
 .gridcontainer.cta-area{
+	.wrap{
+	}
 	.wysiwyg{
+		h1,h2,h3,h4,h5,h6{
+			color: tint($color-secondary, 100%);
+		}
+		a{
+			color: tint($color-secondary, 60%);
+		}
 		color: $color-white;
 		text-align: center;
-		padding: $margin-default+px;
-		background-color: $color-primary;
+		padding: 8vh $margin-xlarge+px;
+		background-color: $color-accent-three;
+		border-radius: 20px;
 	}
 }
 .gridcontainer.light{

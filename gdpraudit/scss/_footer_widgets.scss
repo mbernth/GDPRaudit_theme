@@ -31,7 +31,10 @@
 
 .footer-widgets a {
 	color: $color-white;
-	&:hover{
+	text-decoration: none;
+	&:hover,
+	&:focus{
+		color: $color-secondary;
 		text-decoration: none;
 	}
 }
@@ -43,12 +46,13 @@
 .footer-widgets a.button {
 	color: $color-white;
 	text-decoration:none;
+	&:hover,
+	:focus {
+		color: $color-white;
+		text-decoration:none;
+	}
 }
-.footer-widgets a:hover,
-.footer-widgets a:focus {
-	color: $color-white;
-	text-decoration:none;
-}
+
 
 
 .footer-widgets li {
@@ -89,4 +93,23 @@
 .simple-social-icons a:focus {
     border-bottom: none;
     box-shadow: none;
+}
+
+/* ## Social Icons
+---------------------------------------------------------------------- */
+.widget_nav_menu{
+	.menu{
+		display: flex;
+		flex-direction: column;
+		border-top: 1px solid $color-white;
+		padding-top: 20px;
+		.menu-item{
+			display: block;
+			padding: 0;
+		}
+		.menu-item.current_page_item a{
+			color: $color-secondary;
+			font-weight: bold;
+		}
+	}
 }

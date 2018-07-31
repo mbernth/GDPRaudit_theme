@@ -25,6 +25,7 @@ function mono_flexible_grids() {
 			$rowbuttonmanual = get_sub_field('row_button_manual_url');
 			$rowtext = 	get_sub_field('row_button_clone');
 			$coll = get_sub_field('columns_no');
+			$ctaheadline = get_sub_field('call_to_action_headline');
 			$ctaphone = get_sub_field('call_to_action_phone');
 			$ctacontent = get_sub_field('call_to_action_content');
 			$clip_path_element_array = get_sub_field( 'clip_path_element' );
@@ -45,7 +46,7 @@ function mono_flexible_grids() {
 					echo '">';
 						echo '<div class="wrap">';
 							echo '<section class="wysiwyg">';
-								echo '<h2>Ring <a href="tel:'.$ctaphone.'">'.$ctaphone.'</a></h2>';
+								echo '<h2 class="row_headline">'. $ctaheadline .' <a href="tel:'.$ctaphone.'">'.$ctaphone.'</a></h2>';
 								echo ''.$ctacontent.'';
 							echo '</section>';
 						echo '</div>';

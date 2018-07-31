@@ -16,6 +16,41 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/gdpr-framework\/languages\/da.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpr-framework\/languages\/da.mo",
+		"oF": 0
+		},
+	"\/gdpr-framework\/languages\/da.po": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpr-framework\/languages\/da.po",
+		"oF": 0
+		},
+	"\/gdpr-framework\/languages\/gdpr-framework-da_DK.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpr-framework\/languages\/gdpr-framework-da_DK.mo",
+		"oF": 0
+		},
+	"\/gdpr-framework\/languages\/gdpr-framework-da_DK.po": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpr-framework\/languages\/gdpr-framework-da_DK.po",
+		"oF": 0
+		},
+	"\/gdpr-framework\/languages\/gdpr-framework.pot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/gdpr-framework\/languages\/gdpr-framework.pot",
+		"oF": 0
+		},
 	"\/gdpraudit\/archive.php": {
 		"cB": 0,
 		"ft": 8192,

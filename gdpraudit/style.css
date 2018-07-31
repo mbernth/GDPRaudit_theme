@@ -2300,7 +2300,7 @@ label {
   font-weight: 300;
   color: #9ea7a7; }
 
-.button {
+a.button {
   padding: 10px 24px;
   text-align: left;
   width: 100%;
@@ -2314,28 +2314,28 @@ label {
   -ms-transition: all 0.6s ease-in-out;
   -o-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out; }
-  .button:hover {
+  a.button:hover {
     color: white;
     box-shadow: inset 200px 0 0 #87BB2D; }
-  .button.button-primary {
+  a.button.button-primary {
     color: #44BFB7;
     border-left: 5px solid #44BFB7;
     box-shadow: inset 0 0 0 #44BFB7; }
-    .button.button-primary:hover {
+    a.button.button-primary:hover {
       color: white;
       box-shadow: inset 200px 0 0 #44BFB7; }
-  .button.button-info {
+  a.button.button-info {
     color: #0D2322;
     border-left: 5px solid #0D2322;
     box-shadow: inset 0 0 0 #0D2322; }
-    .button.button-info:hover {
+    a.button.button-info:hover {
       color: white;
       box-shadow: inset 200px 0 0 #0D2322; }
-  .button.button-alert {
+  a.button.button-alert {
     color: #bf312d;
     border-left: 5px solid #bf312d;
     box-shadow: inset 0 0 0 #bf312d; }
-    .button.button-alert:hover {
+    a.button.button-alert:hover {
       color: white;
       box-shadow: inset 200px 0 0 #bf312d; }
 
@@ -2731,7 +2731,7 @@ th {
 .page-template-default.full-width-content .site-inner .content .entry {
   max-width: 640px; }
   .page-template-default.full-width-content .site-inner .content .entry .entry-content {
-    margin-bottom: 130px; }
+    margin-bottom: 15vh; }
 
 /* ### Site Containers Full-width
 --------------------------------------------- */
@@ -2802,8 +2802,13 @@ th {
 .gridcontainer.cta-area .wysiwyg {
   color: #FDFFFC;
   text-align: center;
-  padding: 30px;
-  background-color: #44BFB7; }
+  padding: 8vh 40px;
+  background-color: #9FC957;
+  border-radius: 20px; }
+  .gridcontainer.cta-area .wysiwyg h1, .gridcontainer.cta-area .wysiwyg h2, .gridcontainer.cta-area .wysiwyg h3, .gridcontainer.cta-area .wysiwyg h4, .gridcontainer.cta-area .wysiwyg h5, .gridcontainer.cta-area .wysiwyg h6 {
+    color: white; }
+  .gridcontainer.cta-area .wysiwyg a {
+    color: #dbf7e9; }
 
 .gridcontainer.light {
   background-color: #a6ebc9;
@@ -3970,6 +3975,9 @@ a#CybotCookiebotDialogBodyButtonAccept:hover {
     transform: translateY(0%);
     opacity: 1; } }
 
+#gdpr_email {
+  margin-bottom: 30px; }
+
 /*
 	
 	@import "plugins/timeline";
@@ -4597,8 +4605,10 @@ p.entry-meta {
   max-width: 320px; }
 
 .footer-widgets a {
-  color: #FDFFFC; }
-  .footer-widgets a:hover {
+  color: #FDFFFC;
+  text-decoration: none; }
+  .footer-widgets a:hover, .footer-widgets a:focus {
+    color: #A6EBC9;
     text-decoration: none; }
 
 .footer-widgets input {
@@ -4607,11 +4617,10 @@ p.entry-meta {
 .footer-widgets a.button {
   color: #FDFFFC;
   text-decoration: none; }
-
-.footer-widgets a:hover,
-.footer-widgets a:focus {
-  color: #FDFFFC;
-  text-decoration: none; }
+  .footer-widgets a.button:hover,
+  .footer-widgets a.button :focus {
+    color: #FDFFFC;
+    text-decoration: none; }
 
 .footer-widgets li {
   margin-bottom: 10px;
@@ -4645,6 +4654,20 @@ p.entry-meta {
 .simple-social-icons a:focus {
   border-bottom: none;
   box-shadow: none; }
+
+/* ## Social Icons
+---------------------------------------------------------------------- */
+.widget_nav_menu .menu {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #FDFFFC;
+  padding-top: 20px; }
+  .widget_nav_menu .menu .menu-item {
+    display: block;
+    padding: 0; }
+  .widget_nav_menu .menu .menu-item.current_page_item a {
+    color: #A6EBC9;
+    font-weight: bold; }
 
 /*
 # Site Footer
@@ -7176,13 +7199,6 @@ p.entry-meta {
 ---------------------------------------------------------------------------------------------------- */
   /* ## Entries
 ---------------------------------------------------------------------- */
-  /*
-.content .post{
-	img{
-		@include structure(585, $target-large)
-	}
-}
-*/
   /* ## Buttons
 ---------------------------------------------------------------------- */
   /* ## Entry Meta
