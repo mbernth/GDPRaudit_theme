@@ -138,3 +138,68 @@
 		grid-template-columns:repeat(1, 1fr);
 	}
 }
+
+/* # Call to action
+--------------------------------------------------- */
+.kontakt-form{
+	text-align: left;
+	ul{
+		display: flex;
+		flex-flow: wrap;
+		justify-content: space-between;
+		input,
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		input[type="tel"] {
+			text-decoration: none;
+			border:none;
+			border-color: none;
+			background-color: tint($color-active, 40%);
+			&:focus{
+				border-color: none;
+				background-color: tint($color-active, 60%);
+			}
+			&:hover{
+				border-color: none;
+				background-color: tint($color-active, 60%);
+			}
+		}
+		label{
+			color: $color-white;
+		}
+		.gfield_required{
+			color: $color-accent-one;
+		}
+		.info-text{
+			width: 100%;
+		}
+		.navn-felt{
+			width: 100%;
+		}
+		.email-felt{
+			width: calc(50% - 15px);
+			width: 100%;
+		}
+		.tel-felt{
+			width: calc(50% - 15px);
+			width: 100%;
+		}
+	}
+	.gform_footer.top_label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+		.gform_button.button{
+			color:$g_font-button-primary-color;
+			background-color: $g_font-button-primary-background-color;
+			&:hover,
+			&:focus{
+				color:$g_font-button-primary-color-hover;
+				background-color: $g_font-button-primary-background-color-hover;
+				box-shadow: $g_font-button-primary-box-shadow-hover;
+			}
+		}
+	}
+}

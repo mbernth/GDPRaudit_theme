@@ -29,6 +29,7 @@ function mono_flexible_grids() {
 			$ctaphone = get_sub_field('call_to_action_phone');
 			$ctacontent = get_sub_field('call_to_action_content');
 			$clip_path_element_array = get_sub_field( 'clip_path_element' );
+			$call_out_element = get_sub_field( 'call_out_element' );
 
 			if( get_row_layout() == 'call_to_action' ):
 				$hide_cta_array = get_sub_field( 'hide_cta' );
@@ -61,13 +62,19 @@ function mono_flexible_grids() {
 				
 				}else{
 				// Add background color and ID if needed
-				echo '<article class="gridcontainer  ';
+				echo '<article class="gridcontainer ';
 						the_sub_field('background_colour');
 						echo ' coll' . $coll . '';
 						if ( $clip_path_element_array ):
 							foreach ( $clip_path_element_array as $clip_path_element_item ):
 								 echo ' ';
 								 echo $clip_path_element_item;
+							endforeach;
+						endif;
+						if ( $call_out_element ):
+							foreach ( $call_out_element as $clip_path_element_item ):
+								echo ' '; 
+								echo $clip_path_element_item;
 							endforeach;
 						endif;
 					if (get_sub_field('row_id')){

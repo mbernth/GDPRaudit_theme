@@ -2761,6 +2761,8 @@ th {
     margin: 0 auto; }
     .gridcontainer .wrap section {
       padding: 30px 0 0; }
+  .gridcontainer.coll1 .wrap {
+    max-width: 760px; }
   .gridcontainer.clip::before {
     position: absolute;
     content: '';
@@ -2774,6 +2776,17 @@ th {
     padding-top: 15vh; }
   .gridcontainer.clip-bottom {
     padding-bottom: 15vh; }
+  .gridcontainer.callout .wrap {
+    max-width: 320px; }
+  .gridcontainer.callout .wysiwyg {
+    background-color: #FDFFFC;
+    padding: 30px;
+    box-shadow: 0px 5px 3px 0px rgba(14, 28, 45, 0.25); }
+    .gridcontainer.callout .wysiwyg ul {
+      margin: 0 0 30px 0; }
+    .gridcontainer.callout .wysiwyg li {
+      list-style: none;
+      margin-bottom: 15px; }
 
 .gridcontainer.non {
   padding: 0; }
@@ -2802,9 +2815,10 @@ th {
 .gridcontainer.cta-area .wysiwyg {
   color: #FDFFFC;
   text-align: center;
-  padding: 8vh 40px;
+  padding: 8vh 20px;
   background-color: #9FC957;
-  border-radius: 20px; }
+  border-radius: 10px;
+  box-shadow: 0px 5px 3px 0px rgba(14, 28, 45, 0.25); }
   .gridcontainer.cta-area .wysiwyg h1, .gridcontainer.cta-area .wysiwyg h2, .gridcontainer.cta-area .wysiwyg h3, .gridcontainer.cta-area .wysiwyg h4, .gridcontainer.cta-area .wysiwyg h5, .gridcontainer.cta-area .wysiwyg h6 {
     color: white; }
   .gridcontainer.cta-area .wysiwyg a {
@@ -4880,6 +4894,64 @@ p.entry-meta {
   display: grid;
   grid-template-columns: repeat(1, 1fr); }
 
+/* # Call to action
+--------------------------------------------------- */
+.kontakt-form {
+  text-align: left; }
+  .kontakt-form ul {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between; }
+    .kontakt-form ul input,
+    .kontakt-form ul input[type="text"],
+    .kontakt-form ul input[type="email"],
+    .kontakt-form ul input[type="number"],
+    .kontakt-form ul input[type="tel"] {
+      text-decoration: none;
+      border: none;
+      border-color: none;
+      background-color: #b7d681; }
+      .kontakt-form ul input:focus,
+      .kontakt-form ul input[type="text"]:focus,
+      .kontakt-form ul input[type="email"]:focus,
+      .kontakt-form ul input[type="number"]:focus,
+      .kontakt-form ul input[type="tel"]:focus {
+        border-color: none;
+        background-color: #cfe4ab; }
+      .kontakt-form ul input:hover,
+      .kontakt-form ul input[type="text"]:hover,
+      .kontakt-form ul input[type="email"]:hover,
+      .kontakt-form ul input[type="number"]:hover,
+      .kontakt-form ul input[type="tel"]:hover {
+        border-color: none;
+        background-color: #cfe4ab; }
+    .kontakt-form ul label {
+      color: #FDFFFC; }
+    .kontakt-form ul .gfield_required {
+      color: #bf312d; }
+    .kontakt-form ul .info-text {
+      width: 100%; }
+    .kontakt-form ul .navn-felt {
+      width: 100%; }
+    .kontakt-form ul .email-felt {
+      width: calc(50% - 15px);
+      width: 100%; }
+    .kontakt-form ul .tel-felt {
+      width: calc(50% - 15px);
+      width: 100%; }
+  .kontakt-form .gform_footer.top_label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; }
+    .kontakt-form .gform_footer.top_label .gform_button.button {
+      color: #FDFFFC;
+      background-color: #44BFB7; }
+      .kontakt-form .gform_footer.top_label .gform_button.button:hover, .kontakt-form .gform_footer.top_label .gform_button.button:focus {
+        color: #FDFFFC;
+        background-color: #69ccc5;
+        box-shadow: 0px 5px 3px 0px rgba(14, 28, 45, 0.25); }
+
 /* ## Archive
 ---------------------------------------------------------------------------------------------------- */
 .archive.full-width-content .content {
@@ -5400,7 +5472,7 @@ p.entry-meta {
 ---------------------------------------------
 ---------------------------------------------
 --------------------------------------------- */
-@media only screen and (min-width: 55.625em) {
+@media only screen and (min-width: 48em) {
   /* # Small screens
 ---------------------------------------------------------------------------------------------------- */
   /* ## 55.625emem / 890 pixel
@@ -5569,6 +5641,20 @@ p.entry-meta {
 ---------------------------------------------------------------------- */
   /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */
+  /* # Frontpage Style
+---------------------------------------------------------------------------------------------------- */
+  /* # Call to action
+--------------------------------------------------- */
+  .gridcontainer.cta-area .wrap {
+    max-width: 500px; }
+    .gridcontainer.cta-area .wrap .wysiwyg {
+      padding: 8vh 30px; }
+  .kontakt-form {
+    text-align: left; }
+    .kontakt-form ul .email-felt {
+      width: calc(50% - 15px); }
+    .kontakt-form ul .tel-felt {
+      width: calc(50% - 15px); }
   /* # Animations
 ---------------------------------------------------------------------------------------------------- */
   /* ## Keyframes
@@ -6294,6 +6380,13 @@ p.entry-meta {
     max-width: 920px; }
   .gridcontainer .wrap {
     max-width: 920px; }
+  .gridcontainer.callout .wrap {
+    max-width: 920px; }
+  .gridcontainer.callout .wysiwyg {
+    padding: 30px;
+    box-shadow: 0px 5px 3px 0px rgba(14, 28, 45, 0.25); }
+    .gridcontainer.callout .wysiwyg ul {
+      margin: 0 0 30px 0; }
   .gridcontainer .backimage {
     min-height: 400px; }
   @supports (display: grid) {
@@ -7918,6 +8011,10 @@ p.entry-meta {
     max-width: 920px; }
   .gridcontainer .wrap {
     max-width: 920px; }
+  .gridcontainer.callout .wrap {
+    max-width: 1000px; }
+  .gridcontainer.callout .wysiwyg ul {
+    margin: 0 0 60px 0; }
   .gridcontainer .backimage {
     min-height: 50vh; }
   @supports (display: grid) {
@@ -8034,6 +8131,18 @@ p.entry-meta {
 ---------------------------------------------------------------------------------------------------- */
   .home-section .site-header {
     padding-top: 100px; }
+  /* # Call to action
+--------------------------------------------------- */
+  .gridcontainer.cta-area .wrap {
+    max-width: 620px; }
+    .gridcontainer.cta-area .wrap .wysiwyg {
+      padding: 60px 40px; }
+  .kontakt-form {
+    text-align: left; }
+    .kontakt-form ul .email-felt {
+      width: calc(50% - 20px); }
+    .kontakt-form ul .tel-felt {
+      width: calc(50% - 20px); }
   /* # Animations
 ---------------------------------------------------------------------------------------------------- */
   /* ## Keyframes

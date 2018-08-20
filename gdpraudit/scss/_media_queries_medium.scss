@@ -115,6 +115,18 @@
 	.wrap{
 		max-width: $target-medium+px;
 	}
+	&.callout{
+		.wrap{
+			max-width: 920px;
+		}
+		.wysiwyg{
+			padding: $margin-medium+px;
+			box-shadow: $g_font-button-box-shadow-hover;
+			ul{
+				margin: 0 0 $margin-medium+px 0;
+			}
+		}
+	}
 }
 .gridcontainer{
 	.backimage{

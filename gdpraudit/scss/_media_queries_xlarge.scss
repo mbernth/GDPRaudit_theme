@@ -65,6 +65,16 @@
 	.wrap{
 		max-width: $target-xlarge+px;
 	}
+	&.callout{
+		.wrap{
+			max-width: 1000px;
+		}
+		.wysiwyg{
+			ul{
+				margin: 0 0 60px 0;
+			}
+		}
+	}
 }
 .gridcontainer{
 	.backimage{
@@ -205,6 +215,27 @@
 .home-section{
 	.site-header{
 		padding-top: 100px;
+	}
+}
+/* # Call to action
+--------------------------------------------------- */
+.gridcontainer.cta-area{
+	.wrap{
+		max-width: 620px;
+		.wysiwyg{
+			padding: 60px 40px;
+		}
+	}
+}
+.kontakt-form{
+	text-align: left;
+	ul{
+		.email-felt{
+			width: calc(50% - 20px);
+		}
+		.tel-felt{
+			width: calc(50% - 20px);
+		}
 	}
 }
 
