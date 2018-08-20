@@ -4934,10 +4934,8 @@ p.entry-meta {
     .kontakt-form ul .navn-felt {
       width: 100%; }
     .kontakt-form ul .email-felt {
-      width: calc(50% - 15px);
       width: 100%; }
     .kontakt-form ul .tel-felt {
-      width: calc(50% - 15px);
       width: 100%; }
   .kontakt-form .gform_footer.top_label {
     display: flex;
